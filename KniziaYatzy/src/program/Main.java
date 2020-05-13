@@ -3,8 +3,8 @@ package program;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hej på er!");
-
+		System.out.println("Hallå!");
+		
 	}
 
 }

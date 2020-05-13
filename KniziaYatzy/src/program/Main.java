@@ -8,7 +8,7 @@ public class Main {
 		
 		//Just for testing prurpouse
 		Dices dices = new Dices();
-		dices.rollDice();
+		dices.rollDice(5);
 
 
 		

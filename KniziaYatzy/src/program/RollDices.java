@@ -5,7 +5,7 @@ import java.util.Random;
 public class RollDices {
 
 	Random random = new Random();
-	private int[] dices = {0,0,0,0,0};
+	public int[] dices = {0,0,0,0,0};
 	
 	
 	//When you want to roll all five dices at once

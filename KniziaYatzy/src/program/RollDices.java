@@ -2,7 +2,7 @@ package program;
 
 import java.util.Random;
 
-public class Dices {
+public class RollDices {
 
 	Random random = new Random();
 	private int[] dices= new int[5];

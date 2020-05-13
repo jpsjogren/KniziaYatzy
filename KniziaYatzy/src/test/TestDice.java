@@ -3,13 +3,13 @@ package test;
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
-import program.Dices;
+import program.RollDices;
 
 class TestDice {
 
 	@Test
 	void test() {
-		Dices dices = new Dices();
+		RollDices dices = new RollDices();
 		
 		dices.rollAllDices();
 		dices.rollSpecificDice(1);

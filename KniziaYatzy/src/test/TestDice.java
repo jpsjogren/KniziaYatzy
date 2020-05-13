@@ -1,9 +1,6 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.Arrays;
-
 import org.junit.jupiter.api.Test;
 
 import program.Dices;
@@ -20,7 +17,6 @@ class TestDice {
 		System.out.println(Arrays.toString(test));
 		
 		
-		//fail("Not yet implemented");
 	}
 
 }

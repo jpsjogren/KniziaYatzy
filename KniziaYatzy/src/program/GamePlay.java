@@ -1,5 +1,6 @@
 package program;
 
+import java.util.Arrays;
 
 public class GamePlay {
 	
@@ -15,8 +16,11 @@ public class GamePlay {
 	
 	public void roundOne() {
 		dice.rollAllDices();
-		Show.dices(dice);
-		holding.split("1 2");
+		Show.dices(dice, holdingDices);
+		//TODO Menu choice on what to hold.
+		//To be inserted into holding.split();
+		
+		holding.split("5 1 2 ");
 		holdingDices = holding.getHolded();
 		
 	}
@@ -25,14 +29,16 @@ public class GamePlay {
 		
 		dice.rollSpecificDice(saves);
 			
-		Show.dices(dice);
-		//TODO: hold dices
+		Show.dices(dice, holdingDices);
+		Arrays.fill(holdingDices, false);
+		holding.split("3 1 2 ");
+		holdingDices = holding.getHolded();
 	}
 	
 	public void roundThree(boolean[] saves) {
 		
 		dice.rollSpecificDice(saves);
-		Show.dices(dice);
+		Show.dices(dice, holdingDices);
 		//TODO: show possible results
 		//TODO: choose result
 	}

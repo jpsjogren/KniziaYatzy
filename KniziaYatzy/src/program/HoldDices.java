@@ -2,9 +2,19 @@ package program;
 
 public class HoldDices {
 	
-	static boolean[] toHold = new boolean[5];
+	boolean[] toHold = new boolean[5];
 	
-	public  void split(String input) {
+	/*
+	 * This class takes a String input and converts it to a boolean array.
+	 * So that the Gameplay Class knows what to hold.
+	 * In case that the String is in the wrong format, it will return an error message and go back to the menu.
+	 * 
+	 */
+	
+	
+	//For triming away spacec and check the lenght is not over 5 dices
+	//It will also split the string into seperate string in an array
+	public void split(String input) {
 		input = input.trim();
 		if (input.length() > 10) {
 			errorHandling("Du har skrivit för många tecken");
@@ -15,8 +25,9 @@ public class HoldDices {
 	
 	
 	
-	
-	private  void parsing(String[] splitted) {
+	//For converting String to int
+	//If its not an int, then pass on to error handling.
+	private void parsing(String[] splitted) {
 		
 		int[] parsed = {0,0,0,0,0};
 		for (int i = 0; i < splitted.length; i++) {
@@ -34,21 +45,23 @@ public class HoldDices {
 	}
 	
 	
-	
-	private  void toBool(int[] parsed) {
+	//Converts the nuber into to true in the right place in the array
+	private void toBool(int[] parsed) {
 		for (int i = 0; i < parsed.length; i++) {
 			if (parsed[i] != 0) {
 				toHold[parsed[i]-1] = true; 
 			}
 		}
+	}
+	
+	//Will show an error message to the user and send you back to the menu.
+	private void errorHandling(String string) {
+		System.out.println(string);
+		//TODO Send back to menu
 		
 	}
 	
-	private  void errorHandling(String string) {
-		// TODO Visa meddelande och skicka tillbaka till nytt menyMetod.
-		
-	}
-	
+	//Will return the boolean array
 	public boolean[] getHolded() {
 		return toHold;
 	}

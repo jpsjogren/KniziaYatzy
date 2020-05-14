@@ -16,7 +16,6 @@ public class HoldDices {
 	
 	
 	
-	
 	private static void parsing(String[] splitted) {
 		
 		int[] parsed = {0,0,0,0,0};

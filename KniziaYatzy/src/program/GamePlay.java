@@ -3,24 +3,25 @@ package program;
 
 public class GamePlay {
 	
-	static RollDices dice = new RollDices();
-	static boolean[] holdingDices = {false, false, false, false, false};
+	RollDices dice = new RollDices();
+	boolean[] holdingDices = {false, false, false, false, false};
+	HoldDices holding = new HoldDices();
 	
-	public static void game() {
+	public void game() {
 		roundOne();
 		roundTwo(holdingDices);
 		roundThree(holdingDices);
 	}
 	
-	public static void roundOne() {
+	public void roundOne() {
 		dice.rollAllDices();
 		Show.dices(dice);
-		HoldDices.split("1 2 ");
-		holdingDices = HoldDices.getHolded();
+		holding.split("1 2");
+		holdingDices = holding.getHolded();
 		
 	}
 	
-	public static void roundTwo(boolean[] saves) {
+	public void roundTwo(boolean[] saves) {
 		
 		dice.rollSpecificDice(saves);
 			
@@ -28,7 +29,7 @@ public class GamePlay {
 		//TODO: hold dices
 	}
 	
-	public static void roundThree(boolean[] saves) {
+	public void roundThree(boolean[] saves) {
 		
 		dice.rollSpecificDice(saves);
 		Show.dices(dice);

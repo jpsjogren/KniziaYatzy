@@ -45,7 +45,7 @@ public class Menu {
 
 
 	public static void interactionMenu() {		
-			
+			GamePlay play = new GamePlay(); 
 
 		do {
 			//Scanner scan = new Scanner(System.in);            
@@ -60,13 +60,14 @@ public class Menu {
 			switch(choice) {
 			case("1"):                
 				//System.out.println("Kasta tärningar");        //tillfälliga alternativ  				
-				GamePlay.game();
+				play.game();
 			break;
 			case("2"):                
 				System.out.println("Spara tärningar");                
 			break;
 			case("3"):
 				System.out.println("Stänger ner");
+				System.exit(0);
 			break;
 			default:
 				System.out.println("Fel värde (tips 1-3)");    

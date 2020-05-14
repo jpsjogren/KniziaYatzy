@@ -28,22 +28,6 @@ class TestDice {
 	}
 	
 	@Test
-	void rollOneDice() {
-		
-		RollDices dices = new RollDices();
-		int[] testDices = new int[5];
-		int[] notExpectedDices = {0,0,0,0,0};
-		
-		for (int i = 0; i < testDices.length; i++) {
-			dices.rollSpecificDice(i);
-			testDices = dices.getDice();
-			if (testDices[i] < 1 && testDices[i] > 6) {
-				fail("Dice not between 1-6");
-			}
-		}		
-	}
-	
-	@Test
 	void getDices() {
 		RollDices dices = new RollDices();
 		int[] testDices = dices.getDice();

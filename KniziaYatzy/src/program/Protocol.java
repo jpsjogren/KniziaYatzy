@@ -1,18 +1,22 @@
 package program;
 
-class Protocol {
+public class Protocol {
 
   Rule[] protocol; // protocol is an array of Rules
                    // protocol consists of 16 rows, including Bonus
                    // each row has a unique way of calculating the score
-  String name;
+  String player_name;
   
-  Protocol(String player) {
-    name = player;
+  Protocol(String player) throws Exception {
+    player_name = player;
     protocol = new Rule[16];
-    protocol[0] = new Ones();
-    protocol[1] = new Twos();
+    int i = 0;
+    protocol[i++] = new Ones();
+    protocol[i++] = new Twos();
     // ...
-    protocol[15] = new Yatzy();
+    protocol[i++] = new Yatzy();
+    if (i != 16) {
+      throw Exception("Internt fel BADRULECOUNT"); // "Internal error - wrong number of rules"
+    }
   }
 }

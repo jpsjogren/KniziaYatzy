@@ -1,6 +1,6 @@
 package program;
 
-interface RuleStorage { // saves the number exactly once (sv: sparar ett heltal exakt en gång)
+public interface RuleStorage { // saves the number exactly once (sv: sparar ett heltal exakt en gång)
 
   int peek() throws Exception; // shows what's in the score box
                                // (sv: returnerar vilken data var sparad av den här regeln tidigare)

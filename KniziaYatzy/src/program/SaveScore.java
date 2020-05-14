@@ -1,6 +1,6 @@
 package program;
 
-class SaveScore implements RuleStorage {
+public class SaveScore implements RuleStorage {
 
   private int data;
   private boolean present;

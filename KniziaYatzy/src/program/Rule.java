@@ -6,4 +6,8 @@ public interface Rule extends RuleStorage { // interface for implementing each o
 
     int calculate(Rule[] protocol, int[] dices_contents);
 
+    String rule_name();
+    
+    String rule_description();
+
 }

@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hallå!");
+		System.out.println("HallÃ¥!");
 		
+
 		// story ID#5 starts
 		RollDices dicesObj = new RollDices();
 		dicesObj.rollAllDices();
@@ -18,6 +19,7 @@ public class Main {
 			iSerialNo++;
 		}
 		// story ID#5 ends
+
 	}
 
 }

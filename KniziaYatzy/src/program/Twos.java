@@ -2,7 +2,7 @@
 
 package program;
 
-class Twos extends AnyStorage implements Rule {
+class Twos extends SaveScore implements Rule {
 
   public int calculate(Rule[] protocol, RollDice result) {
     return 1;

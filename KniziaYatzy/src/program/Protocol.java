@@ -11,12 +11,12 @@ public class Protocol {
     player_name = player;
     protocol = new Rule[16];
     int i = 0;
-    protocol[i++] = new Ones();
+    //protocol[i++] = new Ones();
     protocol[i++] = new Twos();
     // ...
-    protocol[i++] = new Yatzy();
-    if (i != 16) {
-      throw Exception("Internt fel BADRULECOUNT"); // "Internal error - wrong number of rules"
+    //protocol[i++] = new Yatzy();
+    if (i != 1) {
+      throw new Exception("Internt fel BADRULECOUNT"); // "Internal error - wrong number of rules"
     }
   }
 }

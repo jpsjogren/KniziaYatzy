@@ -49,7 +49,7 @@ public class HoldDices {
 		
 	}
 	
-	public boolean[] getHolded() {
+	public static boolean[] getHolded() {
 		return toHold;
 	}
 }

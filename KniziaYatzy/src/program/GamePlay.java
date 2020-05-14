@@ -15,7 +15,8 @@ public class GamePlay {
 	public static void roundOne() {
 		dice.rollAllDices();
 		Show.dices(dice);
-		//TODO: hold dices in array
+		HoldDices.split("1 2 ");
+		holdingDices = HoldDices.getHolded();
 		
 	}
 	

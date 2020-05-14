@@ -2,7 +2,7 @@ package program;
 
 //---------------------------- usage example:
 //Protocol p = new Protocol("Kalle Anka");
-//for(int rulenum=0; rulenum < 16; ++rulenum) {
+//for(int rulenum=0; rulenum < p.number_of_rules; ++rulenum) {
 //    int[] dice_contents; // int[5]
 //    int score;
 //    if (p.protocol[rulenum].cast_is_needed()) {
@@ -31,20 +31,23 @@ package program;
 
 public class Protocol {
 
-  Rule[] protocol; // protocol is an array of Rules
-                   // protocol consists of 16 rows, including Bonus
+  Rule[] protocol; // protocol is an array of Rules, per player
+                   // protocol consists of a number of rules
+                   // in practice 16 (i.e. including Bonus et al)
                    // each row has a unique way of calculating the score
+  final int number_of_rules = 1;
+  
   String player_name;
   
   Protocol(String player) throws Exception {
     player_name = player;
-    protocol = new Rule[16];
+    protocol = new Rule[number_of_rules];
     int i = 0;
     //protocol[i++] = new Ones();
     protocol[i++] = new Twos();
     // ...
     //protocol[i++] = new Yatzy();
-    if (i != 1) {
+    if (i != number_of_rules) {
       throw new Exception("Internt fel BADRULECOUNT"); // "Internal error - wrong number of rules"
     }
   }

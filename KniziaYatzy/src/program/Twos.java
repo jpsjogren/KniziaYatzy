@@ -15,7 +15,7 @@ class Twos extends SaveScore implements Rule {
 	return true;
     }
 
-    public int calculate(Rule[] protocol, int[] dices) {
+    public int calculate(Protocol protocol, int[] dices) {
 	int result = 0;
 	for (int i=0; i<5; ++i) {
 	    if (dices[i] == 2) {

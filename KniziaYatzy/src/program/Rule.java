@@ -4,7 +4,7 @@ public interface Rule extends RuleStorage { // interface for implementing each o
 
     boolean cast_is_needed();
 
-    int calculate(Rule[] protocol, int[] dices_contents);
+    int calculate(Protocol protocol, int[] dices_contents);
 
     String rule_name();
     

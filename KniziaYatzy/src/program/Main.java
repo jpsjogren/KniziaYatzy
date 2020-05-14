@@ -5,7 +5,7 @@ package program;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Välkommen till Ytzy!");
+		System.out.println("VÃ¤lkommen till Yatzy!");
 		Menu.startMenu();
 
 	

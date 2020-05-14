@@ -16,8 +16,13 @@ public class RollDices {
 	}
 	
 	//When you want to roll a specific dice. Ex. when you are holding dice x and want to roll the other ones.
-	public void rollSpecificDice(int dice) {
-		rollOneDice(dice);
+	public void rollSpecificDice(boolean[] saves) {
+		
+		for (int i = 0; i < saves.length; i++) {
+			if (saves[i]) {
+				rollOneDice(i);
+			}
+		}
 	}
 	
 	//A private class to protect the dices

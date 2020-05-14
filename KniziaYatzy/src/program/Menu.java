@@ -59,8 +59,8 @@ public class Menu {
 
 			switch(choice) {
 			case("1"):                
-				System.out.println("Kasta tärningar");        //tillfälliga alternativ  				
-				//GamePlay.roundOne();
+				//System.out.println("Kasta tärningar");        //tillfälliga alternativ  				
+				GamePlay.game();
 			break;
 			case("2"):                
 				System.out.println("Spara tärningar");                

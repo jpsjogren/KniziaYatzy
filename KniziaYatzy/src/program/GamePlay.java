@@ -1,23 +1,36 @@
 package program;
 
+
 public class GamePlay {
 	
 	static RollDices dice = new RollDices();
+	static boolean[] holdingDices = {false, false, false, false, false};
+	
+	public static void game() {
+		roundOne();
+		roundTwo(holdingDices);
+		roundThree(holdingDices);
+	}
 	
 	public static void roundOne() {
 		dice.rollAllDices();
-		//TODO: show dices, hold dices
+		Show.dices(dice);
+		//TODO: hold dices in array
 		
 	}
 	
-	public static void roundTwo() {
-		//TODO: roll specific dice
-		//TODO: show dices, hold dices
+	public static void roundTwo(boolean[] saves) {
+		
+		dice.rollSpecificDice(saves);
+			
+		Show.dices(dice);
+		//TODO: hold dices
 	}
 	
-	public static void roundThree() {		
-		//TODO: roll specific dice
-		//TODO: show dices
+	public static void roundThree(boolean[] saves) {
+		
+		dice.rollSpecificDice(saves);
+		Show.dices(dice);
 		//TODO: show possible results
 		//TODO: choose result
 	}

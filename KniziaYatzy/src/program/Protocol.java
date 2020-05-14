@@ -1,6 +1,6 @@
 package program;
 
-class Protocol {
+public class Protocol {
 
   Rule[] protocol; // protocol is an array of Rules
                    // protocol consists of 16 rows, including Bonus

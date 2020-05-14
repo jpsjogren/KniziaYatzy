@@ -4,7 +4,7 @@ public class HoldDices {
 	
 	static boolean[] toHold = new boolean[5];
 	
-	public static void split(String input) {
+	public  void split(String input) {
 		input = input.trim();
 		if (input.length() > 10) {
 			errorHandling("Du har skrivit för många tecken");
@@ -16,7 +16,7 @@ public class HoldDices {
 	
 	
 	
-	private static void parsing(String[] splitted) {
+	private  void parsing(String[] splitted) {
 		
 		int[] parsed = {0,0,0,0,0};
 		for (int i = 0; i < splitted.length; i++) {
@@ -35,7 +35,7 @@ public class HoldDices {
 	
 	
 	
-	private static void toBool(int[] parsed) {
+	private  void toBool(int[] parsed) {
 		for (int i = 0; i < parsed.length; i++) {
 			if (parsed[i] != 0) {
 				toHold[parsed[i]-1] = true; 
@@ -44,12 +44,12 @@ public class HoldDices {
 		
 	}
 	
-	private static void errorHandling(String string) {
+	private  void errorHandling(String string) {
 		// TODO Visa meddelande och skicka tillbaka till nytt menyMetod.
 		
 	}
 	
-	public static boolean[] getHolded() {
+	public boolean[] getHolded() {
 		return toHold;
 	}
 }

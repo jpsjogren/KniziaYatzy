@@ -5,7 +5,7 @@ import java.util.Random;
 public class RollDices {
 
 	Random random = new Random();
-	public int[] dices = {0,0,0,0,0};
+	private int[] dices = {0,0,0,0,0};
 	
 	
 	//When you want to roll all five dices at once
@@ -16,10 +16,11 @@ public class RollDices {
 	}
 	
 	//When you want to roll a specific dice. Ex. when you are holding dice x and want to roll the other ones.
+	//Takes a Bool[] and if its false it will throw the dice again.
 	public void rollSpecificDice(boolean[] saves) {
 		
 		for (int i = 0; i < saves.length; i++) {
-			if (saves[i]) {
+			if (!saves[i]) {
 				rollOneDice(i);
 			}
 		}

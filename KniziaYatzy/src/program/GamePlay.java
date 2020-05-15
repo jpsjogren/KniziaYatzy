@@ -17,10 +17,9 @@ public class GamePlay {
 	public void roundOne() {
 		dice.rollAllDices();
 		Show.dices(dice, holdingDices);
-		//TODO Menu choice on what to hold.
-		//To be inserted into holding.split();
 		
-		holding.split("5 1 2 ");
+		
+		holding.split(Menu.roundMenu());
 		holdingDices = holding.getHolded();
 		
 	}
@@ -31,7 +30,7 @@ public class GamePlay {
 			
 		Show.dices(dice, holdingDices);
 		Arrays.fill(holdingDices, false);
-		holding.split("3 1 2 ");
+		holding.split(Menu.roundMenu());
 		holdingDices = holding.getHolded();
 	}
 	

@@ -18,6 +18,7 @@ public class HoldDices {
 		input = input.trim();
 		if (input.length() > 10) {
 			errorHandling("Du har skrivit för många tecken");
+			
 		}
 		String[] splitted = input.split(" ");
 		parsing(splitted);
@@ -35,9 +36,11 @@ public class HoldDices {
 				parsed[i] = Integer.parseInt(splitted[i]);
 				
 			} catch (Exception e) {
+				
 				errorHandling("Du angav inte en korrekt siffra.\n Använd siffrorna 1-6 och mellanslag mellan varje tärning du vill spara");
 			}
 			if (parsed[i] < 1 && parsed[i] > 6) {
+				
 				errorHandling("Du angav inte en korrekt siffra.\n Använd siffrorna 1-6 och mellanslag mellan varje tärning du vill spara");
 			}
 		}
@@ -55,9 +58,9 @@ public class HoldDices {
 	}
 	
 	//Will show an error message to the user and send you back to the menu.
-	private void errorHandling(String string) {
-		System.out.println(string);
-		//TODO Send back to menu
+	private void errorHandling(String string) {		
+		
+		Menu.roundMenu(string);
 		
 	}
 	

@@ -59,7 +59,6 @@ public class Menu {
 		System.out.println("Vilka tärningar vill du spara?");
 		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
 		String input = scan.nextLine();		
-	
 		
 		return input;
 		
@@ -71,15 +70,13 @@ public class Menu {
 //		
 //	}
 
-	public static void roundMenu(String error) {
+	public static String roundMenu(String error) {
 		System.out.println(error);
 		System.out.println("Vilka tärningar vill du spara?");
 		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
 		
-				
-		HoldDices hold = new HoldDices();
-		hold.split(scan.nextLine()); // får det ej att fungera, errorhandling blir en loop
-	
+		String input = scan.nextLine();			
+		return input;
 		
 	}
 

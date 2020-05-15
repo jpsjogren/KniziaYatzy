@@ -6,7 +6,7 @@ public class Menu {
 
 	private static String choice;
 	private static Scanner scan = new Scanner(System.in);
-	
+
 
 	public static void startMenu() {
 
@@ -27,7 +27,7 @@ public class Menu {
 			switch(choice) {   //tar in användarens input
 			case("1"):                
 				System.out.println("Starta spelet"); 
-				interactionMenu();
+			interactionMenu();
 			break;
 			case("2"):                
 				System.out.println("Settings");        //tillfälligt alternativ, kommer ändra efterhand
@@ -45,39 +45,44 @@ public class Menu {
 
 
 	public static void interactionMenu() {		
-			GamePlay play = new GamePlay(); 
-
-		do {
-			//Scanner scan = new Scanner(System.in);            
-			System.out.println("(1) Börja omgång, kasta tärningar");  
-			System.out.println("(2) Spara tärningar");
-			System.out.println("(3) Avsluta");            
-			System.out.print("\nSkriv in ditt val: ");
-			choice = scan.nextLine();
+		GamePlay play = new GamePlay(); 
 
 
+		//Scanner scan = new Scanner(System.in);            
+		System.out.println("Tryck enter för att börja omgången");
+		scan.nextLine();
+		play.game();
 
-			switch(choice) {
-			case("1"):                
-				//System.out.println("Kasta tärningar");        //tillfälliga alternativ  				
-				play.game();
-			break;
-			case("2"):                
-				System.out.println("Spara tärningar");                
-			break;
-			case("3"):
-				System.out.println("Stänger ner");
-				System.exit(0);
-			break;
-			default:
-				System.out.println("Fel värde (tips 1-3)");    
-			}
-		}
-		while(!choice.equals("3"));
+	}
+	
+	public static String roundMenu() {
+		System.out.println("Vilka tärningar vill du spara?");
+		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
+		String input = scan.nextLine();		
+	
+		
+		return input;
+		
+	}
+	
+//	public static void errorRoundMenu(String error) {
+//		System.out.println(error);
+//		roundMenu();
+//		
+//	}
+
+	public static void roundMenu(String error) {
+		System.out.println(error);
+		System.out.println("Vilka tärningar vill du spara?");
+		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
+		
+				
+		HoldDices hold = new HoldDices();
+		hold.split(scan.nextLine()); // får det ej att fungera, errorhandling blir en loop
+	
+		
 	}
 
 
-
-	
 
 }

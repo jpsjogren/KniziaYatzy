@@ -3,11 +3,7 @@ package program;
 public class SaveScore implements RuleStorage {
 
   private int data;
-  private boolean present;
-
-  SaveScore() {
-    present = false;
-  }
+  private boolean present = false;
 
   public int peek() throws Exception {
     if (!present) {

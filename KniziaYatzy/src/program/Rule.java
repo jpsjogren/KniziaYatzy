@@ -2,6 +2,12 @@ package program;
 
 public interface Rule extends RuleStorage { // interface for implementing each of our 16 rules
 
-  int calculate(Rule[] protocol, RollDices rd);
+    boolean cast_is_needed();
+
+    int calculate(Protocol protocol, int[] dices_contents);
+
+    String rule_name();
+    
+    String rule_description();
 
 }

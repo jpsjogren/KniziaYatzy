@@ -5,10 +5,10 @@ package program;
 class Twos extends SaveScore implements Rule {
 
     public String rule_name() {
-	return "TvÃ¥or";
+	return "Tvåor";
     }
     public String rule_description() {
-	return "Summan av alla tvÃ¥or";
+	return "Summan av alla tvåor";
     }
 
     public boolean cast_is_needed() {

@@ -60,6 +60,8 @@ public class Protocol {
 
     private String the_player_name;
 
+    private Rule the_sum; // the Sum pseudo-rule
+
     Protocol(String player) throws Exception {
         the_player_name = player;
         rules = new Rule[the_number_of_rules];
@@ -78,7 +80,7 @@ public class Protocol {
 // and "half strong order" Swedish Yatzy variation
 // while indexing is for the "free order" variation,
 // where Sum is to be called explicitly via p.sum() when needed
-        Rule the_sum = new Sum();
+        the_sum = new Sum();
         rules[i++] = new Bonus();
         rules[i++] = new OnePair();
         rules[i++] = new TwoPairs();

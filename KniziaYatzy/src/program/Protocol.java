@@ -31,7 +31,9 @@ package program;
 //int r.calculate(p, dices);
 //----------------------------
 //// when needed, read score from a rule:
+//boolean p.empty(rulenum);
 //int p.peek(rulenum);
+//boolean r.empty();
 //int r.peek();
 //----------------------------
 //// metadata:

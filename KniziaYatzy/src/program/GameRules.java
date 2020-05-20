@@ -85,11 +85,5 @@ public class GameRules {
 				"Oavsett om tärningarna visar fem ettor eller fem sexor är det 50 poäng som gäller. Även när det gäller Yatzy har spelaren tre slag på sig.");
 	}
 	
-	public static void cross() {
-		
-		System.out.println("Om spelaren inte lyckas få ett bra resultat eller om denne inte kan få in resultatet någonstans återstår det att stryka.\r\n" + 
-				"\r\n" + 
-				"Spelaren får bara stryka på den halva av protokollet som spelas. En bonus kan dock inte strykas.");
-	}
 
 }

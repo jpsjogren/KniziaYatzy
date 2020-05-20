@@ -9,15 +9,12 @@ public class Menu {
 
 
 	public static void startMenu() {
-
-
-
-
+	
 		do {
 			//Scanner scan = new Scanner(System.in);
 			System.out.println("YATZY");
 			System.out.println("(1) Starta spelet");
-			System.out.println("(2) Settings");
+			System.out.println("(2) Regler");
 			System.out.println("(3) Avsluta");            
 			System.out.print("\nSkriv in ditt val: ");
 			choice = scan.nextLine();
@@ -25,12 +22,11 @@ public class Menu {
 
 
 			switch(choice) {   //tar in användarens input
-			case("1"):                
-				System.out.println("Starta spelet"); 
-			interactionMenu();
+			case("1"): 
+				interactionMenu();
 			break;
 			case("2"):                
-				System.out.println("Settings");        //tillfälligt alternativ, kommer ändra efterhand
+				ruleMenu();        
 			break;
 			case("3"):
 				System.out.println("Stänger ner");
@@ -54,30 +50,86 @@ public class Menu {
 		play.game();
 
 	}
-	
+
 	public static String roundMenu() {
 		System.out.println("Vilka tärningar vill du spara?");
 		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
 		String input = scan.nextLine();		
-		
+
 		return input;
-		
+
 	}
-	
-//	public static void errorRoundMenu(String error) {
-//		System.out.println(error);
-//		roundMenu();
-//		
-//	}
+
+	//	public static void errorRoundMenu(String error) {
+	//		System.out.println(error);
+	//		roundMenu();
+	//		
+	//	}
 
 	public static String roundMenu(String error) {
 		System.out.println(error);
 		System.out.println("Vilka tärningar vill du spara?");
 		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
-		
+
 		String input = scan.nextLine();			
 		return input;
-		
+
+	}
+
+	public static void ruleMenu() {
+
+		System.out.println("SpelRegler:");
+		System.out.println("(1) Hur spelar man?");
+		System.out.println("(2) Protokollets övre del");
+		System.out.println("(3) Bonus");  
+		System.out.println("(4) Protokollets undre del");
+		System.out.println("(5) Tretal och fyrtal");
+		System.out.println("(6) Stegar, eller stor samt liten straight");
+		System.out.println("(7) Kåk");
+		System.out.println("(8) Chans");
+		System.out.println("(9) Yatzy");
+		System.out.println("(10) Att stryka något");
+		System.out.print("\nSkriv in ditt val: ");
+		choice = scan.nextLine();
+
+
+
+		switch(choice) {   //tar in användarens input
+		case("1"):                
+			GameRules.howToPLay();
+		break;
+		case("2"):                
+			GameRules.protocolUpperPart();
+		break;
+		case("3"):
+			GameRules.bonus();
+		break;
+		case("4"):
+			GameRules.protocolDownPart();
+		break;
+		case("5"):
+			GameRules.threesAndFoursome();
+		break;
+		case("6"):
+			GameRules.laddersOrStraightFlush();
+		break;
+		case("7"):
+			GameRules.fullHouse();
+		break;
+		case("8"):
+			GameRules.chance();
+		break;
+		case("9"):
+			GameRules.yatzy();
+		break;
+		case("10"):
+			GameRules.cross();
+		break;
+		default:
+			System.out.println("Fel värde (tips 1-10)");    
+		}
+
+
 	}
 
 

@@ -61,7 +61,7 @@ public class Protocol {
 
     private String the_player_name;
 
-    Protocol(String player) throws Exception {
+    public Protocol(String player) throws Exception {
         the_player_name = player;
         rules = new Rule[the_number_of_rules];
         int i = 0;

@@ -1,14 +1,15 @@
 package test;
 
+import static org.junit.Assert.*;
+import org.junit.*;
+
 import java.util.Arrays;
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
 import program.HoldDices;
 
-class TestHold {
+public class TestHold {
 
 	@Test
-	void test() {
+	public void test() {
 		
 		HoldDices holdDices = new HoldDices();
 		boolean[] expected = {true, false, true, false, true};

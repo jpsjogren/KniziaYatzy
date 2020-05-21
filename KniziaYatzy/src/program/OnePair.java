@@ -2,7 +2,7 @@
 
 package program;
 
-class OnePair extends SaveScore implements Rule {
+public class OnePair extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Ett Par";

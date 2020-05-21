@@ -2,7 +2,7 @@
 
 package program;
 
-class LargeStraight extends SaveScore implements Rule {
+public class LargeStraight extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Stor stege";

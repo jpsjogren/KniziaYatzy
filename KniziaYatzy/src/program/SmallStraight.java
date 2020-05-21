@@ -2,7 +2,7 @@
 
 package program;
 
-class SmallStraight extends SaveScore implements Rule {
+public class SmallStraight extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Liten stege";

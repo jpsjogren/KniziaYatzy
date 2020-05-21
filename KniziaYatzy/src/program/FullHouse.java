@@ -2,7 +2,7 @@
 
 package program;
 
-class FullHouse extends SaveScore implements Rule {
+public class FullHouse extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Kåk";

@@ -2,7 +2,7 @@
 
 package program;
 
-class Fours extends SaveScore implements Rule {
+public class Fours extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Fyror";

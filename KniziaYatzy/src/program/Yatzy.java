@@ -4,7 +4,7 @@ package program;
 
 import java.util.Arrays;
 
-class Yatzy extends SaveScore implements Rule {
+public class Yatzy extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Yatzy";

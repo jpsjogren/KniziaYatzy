@@ -2,7 +2,7 @@
 
 package program;
 
-class ThreeOfAKind extends SaveScore implements Rule {
+public class ThreeOfAKind extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Tre lika";

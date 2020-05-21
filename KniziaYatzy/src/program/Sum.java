@@ -2,7 +2,7 @@
 
 package program;
 
-class Sum extends SaveScore implements Rule {
+public class Sum extends SaveScore implements Rule {
 
     public String rule_name() {
         return "Summan hittills";

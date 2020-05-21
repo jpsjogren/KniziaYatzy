@@ -3,15 +3,15 @@ package test;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.fail;
 
-import java.util.Arrays;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.*;
 
 import program.RollDices;
 
-class TestDice {
+public class TestDice {
 
 	@Test
-	void testRollAllDices() {
+	public void testRollAllDices() {
 		
 		RollDices dices = new RollDices();
 		dices.rollAllDices();
@@ -28,7 +28,7 @@ class TestDice {
 	}
 	
 	@Test
-	void getDices() {
+	public void getDices() {
 		RollDices dices = new RollDices();
 		int[] testDices = dices.getDice();
 		

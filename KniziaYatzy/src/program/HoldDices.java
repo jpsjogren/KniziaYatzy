@@ -22,7 +22,7 @@ public class HoldDices {
 		}
 		input = input.trim();
 		if (input.length() > 10) {
-			errorHandling("Du har skrivit fˆr mÂnga tecken");
+			errorHandling("Du har skrivit f√∂r m√•nga tecken");
 			
 		}
 		else if (input.length() == 0){
@@ -45,11 +45,11 @@ public class HoldDices {
 				
 			} catch (Exception e) {
 				
-				errorHandling("Du angav inte en korrekt siffra.\n Anv‰nd siffrorna 1-6 och mellanslag mellan varje t‰rning du vill spara");
+				errorHandling("Du angav inte en korrekt siffra.\n Anv√§nd siffrorna 1-6 och mellanslag mellan varje t√§rning du vill spara");
 			}
 			if (parsed[i] < 1 && parsed[i] > 6) {
 				
-				errorHandling("Du angav inte en korrekt siffra.\n Anv‰nd siffrorna 1-6 och mellanslag mellan varje t‰rning du vill spara");
+				errorHandling("Du angav inte en korrekt siffra.\n Anv√§nd siffrorna 1-6 och mellanslag mellan varje t√§rning du vill spara");
 			}
 		}
 		toBool(parsed);

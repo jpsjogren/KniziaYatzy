@@ -1,7 +1,7 @@
 package program;
 
 public class HoldDices {
-	
+	Menu menu = new Menu();
 	boolean[] toHold = new boolean[5];
 	boolean error = false;
 	
@@ -68,7 +68,7 @@ public class HoldDices {
 	//Will show an error message to the user and send you back to the menu.
 	private void errorHandling(String string) {		
 		error = false;
-		split(Menu.roundMenu(string));
+		split(menu.roundMenu(string));
 		
 		
 	}

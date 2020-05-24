@@ -6,9 +6,9 @@ public class Show {
 		
 		int[] dices = dice.getDice();
 		int iSerialNo = 1;
-		System.out.println("Dina t‰rningar visar: ");
+		System.out.println("Dina t√§rningar visar: ");
 		for (int i = 0; i < dices.length; i++) {
-			System.out.print("T‰rning " + iSerialNo +": " + dices[i]);
+			System.out.print("T√§rning " + iSerialNo +": " + dices[i]);
 			iSerialNo++;
 			if (hold[i]) {
 				System.out.println(" <-Sparat");

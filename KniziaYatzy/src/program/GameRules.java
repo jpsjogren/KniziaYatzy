@@ -1,108 +1,159 @@
 package program;
 
 public class GameRules {
-	
+
 	public static void howToPLay() {
-		
-		System.out.println("Man börjar alltid med att bestämma vilken spelare som ska börja. Det sker genom att man tar en tärning som varje spelare får slå.\r\n" +
-				"Den spelare som slår högst börjar och sedan går man medurs oavsett hur höga tal de andra spelarna fått på tärningen.\r\n" + 
-				"\r\n" + 
-				"När det är en spelares tur tar denne alla fem tärningarna i en hand och slår dem. Det gäller sedan att se vilka prickar tärningarna visar för att få en hög poäng.\r\n" +
-				"Det är värt att komma ihåg att spelaren vid varje tur har tre slag på sig att få ett så bra resultat som möjligt.\r\n" + 
-				"\r\n" + 
-				"Slagen får inte sparas om spelaren till exempel bara använder ett slag.\r\n" +
-				"När spelaren har slagit en gång bestämmer denne om några tärningar ska sparas under nästa slag eller om alla tärningar ska slås om. Så sker under spelarens samtliga tre kast.\r\n" + 
-				"\r\n" + 
-				"När en spelare har kastat eller slagit tärningarna tre gånger förs resultatet in i blocket.\r\n" + 
-				"\r\n" + 
-				"Man behöver inte följa ordningen som de olika slagen står i på blocket.\r\n");	
+
+		System.out.println(
+"Man bÃ¶rjar alltid med att bestÃ¤mma vilken spelare som ska bÃ¶rja.\r\n" +
+"Det sker genom att man tar en tÃ¤rning som varje spelare fÃ¥r slÃ¥.\r\n" +
+"Den spelare som slÃ¥r hÃ¶gst bÃ¶rjar och sedan gÃ¥r man medurs oavsett\r\n" +
+"hur hÃ¶ga tal de andra spelarna fÃ¥tt pÃ¥ tÃ¤rningen.\r\n" +
+"\r\n" +
+"NÃ¤r det Ã¤r en spelares tur tar denne alla fem tÃ¤rningarna i en hand och\r\n" +
+"slÃ¥r dem. Det gÃ¤ller sedan att se vilka prickar tÃ¤rningarna visar fÃ¶r\r\n" +
+"att fÃ¥ en hÃ¶g poÃ¤ng. Det Ã¤r vÃ¤rt att komma ihÃ¥g att spelaren vid\r\n" +
+"varje tur har tre slag pÃ¥ sig att fÃ¥ ett sÃ¥ bra resultat som mÃ¶jligt.\r\n" +
+"\r\n" +
+"Slagen fÃ¥r inte sparas om spelaren till exempel bara anvÃ¤nder ett slag.\r\n" +
+"\r\n" +
+"NÃ¤r spelaren har slagit en gÃ¥ng bestÃ¤mmer denne om nÃ¥gra tÃ¤rningar\r\n" +
+"ska sparas under nÃ¤sta slag eller om alla tÃ¤rningar ska slÃ¥s om. SÃ¥\r\n" +
+"sker under spelarens samtliga tre kast.\r\n" +
+"\r\n" +
+"NÃ¤r en spelare har kastat eller slagit tÃ¤rningarna tre gÃ¥nger fÃ¶rs\r\n" +
+"resultatet in i blocket.\r\n" +
+"\r\n" +
+"Man behÃ¶ver inte fÃ¶lja ordningen som de olika slagen stÃ¥r i pÃ¥ blocket.\r\n" +
+"");
 
 	}
-	
+
 	public static void protocolUpperPart() {
-		
-		System.out.println("Den övre delen av protokollet innehåller ettor, tvåor, treor, fyror, femmor och sexor.\r\n" +
-				"Det handlar om att spelaren ska få så många som möjligt av var och en av de här siffrorna.\r\n" + 
-				"\r\n" + 
-				"Spelaren får till exempel tre slag på sig att få så många fyror som möjligt.\r\n" +
-				"Om spelaren inte får några måste denne stryka något annat. Om flera fyror fås skrivs de in i protokollet.\r\n" + 
-				"\r\n" + 
-				"Turen går sedan vidare till nästa person.\r\n" +
-				"När den första spelaren får tärningarna igen får denne tre nya slag på sig att försöka få ettor eller något annat.\r\n");
+
+		System.out.println(
+"Den Ã¶vre delen av protokollet innehÃ¥ller ettor, tvÃ¥or, treor, fyror,\r\n" +
+"femmor och sexor. Det handlar om att spelaren ska fÃ¥ sÃ¥ mÃ¥nga som\r\n" +
+"mÃ¶jligt av var och en av de hÃ¤r siffrorna.\r\n" +
+"\r\n" +
+"Spelaren fÃ¥r till exempel tre slag pÃ¥ sig att fÃ¥ sÃ¥ mÃ¥nga fyror\r\n" +
+"som mÃ¶jligt. Resultatet skrivs sedan in i protokollet.\r\n" +
+"\r\n" +
+"Turen gÃ¥r sedan vidare till nÃ¤sta person.\r\n" +
+"\r\n" +
+"NÃ¤r den fÃ¶rsta spelaren fÃ¥r tÃ¤rningarna igen fÃ¥r denne tre nya slag\r\n" +
+"pÃ¥ sig att fÃ¶rsÃ¶ka fÃ¥ ettor eller nÃ¥got annat.\r\n" +
+"");
 	}
-	
+
 	public static void bonus() {
-		System.out.println("Efter att den första delen av protokollet har blivit fyllt räknar man ihop hur många poäng varje spelare har fått och summan skrivs sedan in i protokollet.\r\n" + 
-				"\r\n" + 
-				"Efter det gäller det att kolla om någon spelare har lyckats få bonus.\r\n" +
-				"Den maximala summan att få på den övre delen av protokollet är 105 poäng.\r\n" + 
-				"\r\n" + 
-				"Om spelaren har fått mer än 63 poäng på den övre delen av protokollet får denne en bonus.\r\n" +
-				"Den här bonusen är på 50 poäng. Det är sedan dags att gå vidare till protokollets undre del. Där blir det lite klurigare.\r\n");
+		System.out.println(
+"Efter att den fÃ¶rsta delen av protokollet har blivit fyllt rÃ¤knar man\r\n" +
+"ihop hur mÃ¥nga poÃ¤ng varje spelare har fÃ¥tt och summan skrivs sedan\r\n" +
+"in i protokollet.\r\n" +
+"\r\n" +
+"Efter det gÃ¤ller det att kolla om nÃ¥gon spelare har lyckats fÃ¥ bonus.\r\n" +
+"Den maximala summan att fÃ¥ pÃ¥ den Ã¶vre delen av protokollet Ã¤r 105 poÃ¤ng.\r\n" +
+"\r\n" +
+"Om spelaren har fÃ¥tt mer Ã¤n 63 poÃ¤ng pÃ¥ den Ã¶vre delen av protokollet\r\n" +
+"fÃ¥r denne en bonus. Den hÃ¤r bonusen Ã¤r pÃ¥ 50 poÃ¤ng. Det Ã¤r sedan\r\n" +
+"dags att gÃ¥ vidare till protokollets undre del. DÃ¤r blir det lite\r\n" +
+"klurigare.\r\n" +
+"");
 	}
-	
+
 	public static void protocolDownPart() {
-		
-		System.out.println("I den nedre delen av protokollet handlar det inte längre om att spelaren ska få flest av en viss siffra.\r\n" +
-				"Här blir kombinationerna istället rejält viktiga. Här finns också en del konstiga termer som vi kommer att förklara närmare här.\r\n" + 
-				"\r\n" + 
-				"För det första finns basala termer som ett och två par.\r\n" +
-				"Det handlar helt enkelt om att spelaren bland de fem tärningarna ska få minst ett par, alternativt två par.\r\n" + 
-				"\r\n" + 
-				"Det innebär att spelaren ska få till exempel två treor för ett par. För två par kan spelaren få två fyror och två femmor.\r\n" + 
-				"\r\n" + 
-				"Det ska dock påpekas att ju högre siffror tärningarna visar, desto högre blir poängen.\r\n" +
-				"Två femmor ger till exempel tio poäng på ett par, medan två ettor bara ger två poäng.\r\n");
+
+		System.out.println(
+"I den nedre delen av protokollet handlar det inte lÃ¤ngre om att spelaren\r\n" +
+"ska fÃ¥ flest av en viss siffra. HÃ¤r blir kombinationerna istÃ¤llet\r\n" +
+"rejÃ¤lt viktiga. HÃ¤r finns ocksÃ¥ en del konstiga termer som vi kommer\r\n" +
+"att fÃ¶rklara nÃ¤rmare hÃ¤r.\r\n" +
+"\r\n" +
+"FÃ¶r det fÃ¶rsta finns basala termer som ett och tvÃ¥ par. Det handlar\r\n" +
+"helt enkelt om att spelaren bland de fem tÃ¤rningarna ska fÃ¥ minst ett\r\n" +
+"par, alternativt tvÃ¥ par.\r\n" +
+"\r\n" +
+"Det innebÃ¤r att spelaren ska fÃ¥ till exempel tvÃ¥ treor fÃ¶r ett\r\n" +
+"par. FÃ¶r tvÃ¥ par kan spelaren fÃ¥ tvÃ¥ fyror och tvÃ¥ femmor.\r\n" +
+"\r\n" +
+"Det ska dock pÃ¥pekas att ju hÃ¶gre siffror tÃ¤rningarna visar, desto\r\n" +
+"hÃ¶gre blir poÃ¤ngen. TvÃ¥ femmor ger till exempel tio poÃ¤ng pÃ¥ ett par,\r\n" +
+"medan tvÃ¥ ettor bara ger tvÃ¥ poÃ¤ng.\r\n" +
+"");
 	}
-	
+
 	public static void threesAndFoursome() {
-		
-		System.out.println("Termerna tretal och fyrtal är inte heller så svåra att förstå. Man ska som spelare vid ett tretal helt enkelt få tre likadana tärningar.\r\n" +
-				"Vid ett fyrtal krävs fyra likadana sådana.\r\n" + 
-				"\r\n" + 
-				"Även här har antalet prickar på tärningarna betydelse. Ett tretal med sexor ger till exempel högre poäng än ett med tvåor.\r\n" +
-				"Samma sak gäller för fyrtal. Men sedan kommer de något mer komplicerade momenten.\r\n");
+
+		System.out.println(
+"Termerna tretal och fyrtal Ã¤r inte heller sÃ¥ svÃ¥ra att fÃ¶rstÃ¥. Man\r\n" +
+"ska som spelare vid ett tretal helt enkelt fÃ¥ tre likadana tÃ¤rningar.\r\n" +
+"Vid ett fyrtal krÃ¤vs fyra likadana sÃ¥dana.\r\n" +
+"\r\n" +
+"Ã„ven hÃ¤r har antalet prickar pÃ¥ tÃ¤rningarna betydelse. Ett tretal\r\n" +
+"med sexor ger till exempel hÃ¶gre poÃ¤ng Ã¤n ett med tvÃ¥or. Samma sak\r\n" +
+"gÃ¤ller fÃ¶r fyrtal. Men sedan kommer de nÃ¥got mer komplicerade momenten.\r\n" +
+"");
 	}
-	
+
 	public static void laddersOrStraightFlush() {
-		
-		System.out.println("Liten och stor straight kan också kallas för liten samt stor stege.\r\n" +
-				"Här handlar det om att spelaren ska få alla fem tärningar att visa en stege. Det kan vara lite klurigt.\r\n" + 
-				"\r\n" + 
-				"I en liten straight ska tärningarna visa en etta, en tvåa, en trea, en fyra samt en femma.\r\n" + 
-				"\r\n" + 
-				"I en stor straight ska tärningarna istället visa siffrorna två till sex. Även med tre slag kan det vara lite klurigt att få tärningarna att visa rätt.\r\n" +
-				"En liten straight ger 15 poäng, och en stor ger 20.\r\n");
+
+		System.out.println(
+"Liten och stor straight kan ocksÃ¥ kallas fÃ¶r liten samt stor stege.\r\n" +
+"HÃ¤r handlar det om att spelaren ska fÃ¥ alla fem tÃ¤rningar att visa\r\n" +
+"en stege. Det kan vara lite klurigt.\r\n" +
+"\r\n" +
+"I en liten straight ska tÃ¤rningarna visa en etta, en tvÃ¥a, en trea,\r\n" +
+"en fyra samt en femma.\r\n" +
+"\r\n" +
+"I en stor straight ska tÃ¤rningarna istÃ¤llet visa siffrorna tvÃ¥ till\r\n" +
+"sex. Ã„ven med tre slag kan det vara lite klurigt att fÃ¥ tÃ¤rningarna\r\n" +
+"att visa rÃ¤tt. En liten straight ger 15 poÃ¤ng, och en stor ger 20.\r\n" +
+"");
 	}
-	
+
 	public static void fullHouse() {
-		
-		System.out.println("Även i en kåk måste spelets alla fem tärningar visa rätt symboler för att spelaren ska få poäng.\r\n" +
-				"Här ska spelaren få två tärningar att visa en siffra, medan de andra tre ska visa en annan.\r\n" + 
-				"\r\n" + 
-				"Poängen beror på vilka siffror tärningarna visar. Den bästa kåken spelaren kan få består av tre sexor och två femmor. Den ger 28 poäng.\r\n");
+
+		System.out.println(
+"Ã„ven i en kÃ¥k mÃ¥ste spelets alla fem tÃ¤rningar visa rÃ¤tt symboler\r\n" +
+"fÃ¶r att spelaren ska fÃ¥ poÃ¤ng. HÃ¤r ska spelaren fÃ¥ tvÃ¥ tÃ¤rningar\r\n" +
+"att visa en siffra, medan de andra tre ska visa en annan.\r\n" +
+"\r\n" +
+"PoÃ¤ngen beror pÃ¥ vilka siffror tÃ¤rningarna visar. Den bÃ¤sta kÃ¥ken\r\n" +
+"spelaren kan fÃ¥ bestÃ¥r av tre sexor och tvÃ¥ femmor. Den ger 28 poÃ¤ng.\r\n" +
+"");
 	}
-	
+
 	public static void chance() {
-		
-		System.out.println("När spelaren slår tärningarna finns det alltid en risk att denne inte kan få in slagen under en lämplig rubrik.\r\n" +
-				"Kanske slår spelaren en kåk när denne redan har haft en sådan.\r\n" + 
-				"\r\n" + 
-				"Då finns fältet chans. Här räknas prickarna på alla fem tärningarna samman.\r\n" +
-				"Maxsumman på chansen är 30 och den summan får spelaren genom att slå fem sexor.\r\n" + 
-				"\r\n" + 
-				"Det sker dock inte fullt så ofta. Det är viktigt att komma ihåg att spelaren inte får använda chansfältet innan den övre delen av protokollet är färdigspelad.\r\n" + 
-				"\r\n" + 
-				"Efter det kan dock spelaren använda fältet precis när denne vill. Många gånger är det ett sätt att slippa stryka något.\r\n");
+
+		System.out.println(
+"NÃ¤r spelaren slÃ¥r tÃ¤rningarna finns det alltid en risk att denne\r\n" +
+"inte kan fÃ¥ in slagen under en lÃ¤mplig rubrik. Kanske slÃ¥r spelaren\r\n" +
+"en kÃ¥k nÃ¤r denne redan har haft en sÃ¥dan.\r\n" +
+"\r\n" +
+"DÃ¥ finns fÃ¤ltet chans. HÃ¤r rÃ¤knas prickarna pÃ¥ alla fem tÃ¤rningarna\r\n" +
+"samman. Maxsumman pÃ¥ chansen Ã¤r 30 och den summan fÃ¥r spelaren genom\r\n" +
+"att slÃ¥ fem sexor.\r\n" +
+"\r\n" +
+"Det sker dock inte fullt sÃ¥ ofta. Det Ã¤r viktigt att komma ihÃ¥g\r\n" +
+"att spelaren inte fÃ¥r anvÃ¤nda chansfÃ¤ltet innan den Ã¶vre delen av\r\n" +
+"protokollet Ã¤r fÃ¤rdigspelad.\r\n" +
+"\r\n" +
+"Efter det kan dock spelaren anvÃ¤nda fÃ¤ltet precis nÃ¤r denne\r\n" +
+"vill. MÃ¥nga gÃ¥nger Ã¤r det ett sÃ¤tt att slippa stryka nÃ¥got.\r\n" +
+"");
 	}
-	
+
 	public static void yatzy() {
-		
-		System.out.println("Fältet spelet har fått sitt namn av. En Yatzy ger alltid 50 poäng.\r\n" +
-				"Det handlar om att spelaren lyckas få alla fem tärningar att visa samma siffra.\r\n" + 
-				"\r\n" + 
-				"Oavsett om tärningarna visar fem ettor eller fem sexor är det 50 poäng som gäller. Även när det gäller Yatzy har spelaren tre slag på sig.\r\n");
+
+		System.out.println(
+"FÃ¤ltet spelet har fÃ¥tt sitt namn av. En Yatzy ger alltid 50 poÃ¤ng.\r\n" +
+"Det handlar om att spelaren lyckas fÃ¥ alla fem tÃ¤rningar att visa\r\n" +
+"samma siffra.\r\n" +
+"\r\n" +
+"Oavsett om tÃ¤rningarna visar fem ettor eller fem sexor Ã¤r det 50 poÃ¤ng\r\n" +
+"som gÃ¤ller. Ã„ven nÃ¤r det gÃ¤ller Yatzy har spelaren tre slag pÃ¥ sig.\r\n" +
+"");
 	}
-	
 
 }

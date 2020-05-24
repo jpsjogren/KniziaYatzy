@@ -51,16 +51,18 @@ package program;
 //----------------------------
 
 public class Protocol {
-
+// .............................................................. //
     private Rule[] rules; // protocol is per player,
                           // an array of rules, including Bonus et al,
                           // each rule has its own way of calculating the score,
                           // its own specific metadata as name and description,
                           // and its own "store-once" score storage slot
+// .............................................................. //
     private final int the_number_of_rules = 17;
-
+// .............................................................. //
     private String the_player_name;
 
+// -------------------------------------------------------------- //
     public Protocol(String player) throws Exception {
         the_player_name = player;
         rules = new Rule[the_number_of_rules];
@@ -86,22 +88,26 @@ public class Protocol {
             throw new Exception("Internt fel BADRULECOUNT");//"Internal error - wrong number of rules"
         }
     }
-
+// -------------------------------------------------------------- //
     public String player_name() {
 	return the_player_name;
     }
+// -------------------------------------------------------------- //
     public int number_of_rules() {
 	return the_number_of_rules;
     }
+// -------------------------------------------------------------- //
     public Rule rule(int rulenum) {
         return rules[rulenum];
     }
+// -------------------------------------------------------------- //
     public Rule first_rule() {
         return rules[0];
     }
 // we could have the rules in a linked list,
 // but that would add some complexity,
 // without a noticeable gain
+// -------------------------------------------------------------- //
     public Rule next_rule(Rule r) {
 	int i;
         for (i=0; rules[i]!=r; ++i) {
@@ -112,24 +118,31 @@ public class Protocol {
         }
         return rules[i];
     }
+// -------------------------------------------------------------- //
     public boolean cast_is_needed(int rulenum) {
 	return rules[rulenum].cast_is_needed();
     }
+// -------------------------------------------------------------- //
     public void store(int rulenum, int score) throws Exception {
 	rules[rulenum].store(score);
     }
+// -------------------------------------------------------------- //
     public int peek(int rulenum) throws Exception {
 	return rules[rulenum].peek();
     }
+// -------------------------------------------------------------- //
     public boolean empty(int rulenum) {
 	return rules[rulenum].empty();
     }
+// -------------------------------------------------------------- //
     public int calculate(int rulenum, int[] dices) {
 	return rules[rulenum].calculate(this, dices);
     }
+// -------------------------------------------------------------- //
     public String rule_name(int rulenum) {
 	return rules[rulenum].rule_name();
     }
+// -------------------------------------------------------------- //
     public String rule_description(int rulenum) {
 	return rules[rulenum].rule_description();
     }

@@ -4,8 +4,8 @@ package program;
 
 public class Main {
 	static Menu menu = new Menu();
-	public static void main(String[] args) {
-		System.out.println("Välkommen till Yatzy!");
+	public static void main(String[] args) throws Exception {
+		System.out.println("VÃ¤lkommen till Yatzy!");
 		menu.startMenu();
 		
 

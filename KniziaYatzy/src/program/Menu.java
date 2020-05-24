@@ -9,7 +9,7 @@ public class Menu {
 	static GamePlay play = new GamePlay();
 
 
-	public void startMenu() {
+	public void startMenu() throws Exception {
 
 		do {
 			//Scanner scan = new Scanner(System.in);
@@ -24,16 +24,16 @@ public class Menu {
 
 			switch(choice) {   //tar in anv√§ndarens input
 			case("1"): 
-				playerMenu();
+				GameFlow.gameflow();
 			break;
 			case("2"):                
 				ruleMenu();        
 			break;
 			case("3"):
-				System.out.println("St‰nger ner");
+				System.out.println("St√§nger ner");
 			break;
 			default:
-				System.out.println("Fel v‰rde (tips 1-3)");    
+				System.out.println("Fel v√§rde (tips 1-3)");    
 			}
 		}
 		while(!choice.equals("3"));
@@ -46,15 +46,15 @@ public class Menu {
 
 
 		//Scanner scan = new Scanner(System.in);            
-		System.out.println("Tryck enter fˆr att bˆrja omgÂngen");
+		System.out.println("Tryck enter f√∂r att b√∂rja omg√•ngen");
 		scan.nextLine();
 		play.game();
 
 	}
 
 	public String roundMenu() {
-		System.out.println("Vilka t‰rningar vill du spara?");
-		System.out.println("(Anv‰nd siffrorna pÂ t‰rningarna och space fˆr att seperera dem)");
+		System.out.println("Vilka t√§rningar vill du spara?");
+		System.out.println("(Anv√§nd siffrorna p√• t√§rningarna och space f√∂r att seperera dem)");
 		String input = scan.nextLine();		
 
 		return input;
@@ -69,25 +69,26 @@ public class Menu {
 
 	public String roundMenu(String error) {
 		System.out.println(error);
-		System.out.println("Vilka t‰rningar vill du spara?");
-		System.out.println("(Anv‰nd siffrorna pÂ t‰rningarna och space fˆr att seperera dem)");
+		System.out.println("Vilka t√§rningar vill du spara?");
+		System.out.println("(Anv√§nd siffrorna p√• t√§rningarna och space f√∂r att seperera dem)");
 
 		String input = scan.nextLine();			
 		return input;
 
 	}
 
+/*
 	public void playerMenu() {
 		boolean correct = true;
 		do {
-			System.out.println("Hur mÂnga spelare ‰r ni? ");
+			System.out.println("Hur m√•nga spelare √§r ni? ");
 			
 			System.out.println("(1) Flera spelare");
-			System.out.println("(2) GÂ tillbaka"); 
+			System.out.println("(2) G√• tillbaka"); 
 			System.out.print("\nSkriv in ditt val: ");
 			choice = scan.nextLine();
 			
-			switch(choice) {   //tar in anv‰ndarens input
+			switch(choice) {   //tar in anv√§ndarens input
 			case("1"): 
 				play.setNumberOfPlayers(1);
 				interactionMenu();
@@ -106,12 +107,12 @@ public class Menu {
 			break;			
 			default:
 				correct = false;
-				System.out.println("Fel v‰rde (tips 1-4)");    
+				System.out.println("Fel v√§rde (tips 1-4)");    
 			}
 		}
 		while(!correct);
 	}
-
+*/
 	public void ruleMenu() {
 
 		do {
@@ -119,21 +120,21 @@ public class Menu {
 
 			System.out.println("Spelregler:");
 			System.out.println("(1) Hur spelar man?");
-			System.out.println("(2) Protokollets ˆvre del");
+			System.out.println("(2) Protokollets √∂vre del");
 			System.out.println("(3) Bonus");  
 			System.out.println("(4) Protokollets undre del");
 			System.out.println("(5) Tretal och fyrtal");
 			System.out.println("(6) Stegar, eller stor samt liten straight");
-			System.out.println("(7) KÂk");
+			System.out.println("(7) K√•k");
 			System.out.println("(8) Chans");
 			System.out.println("(9) Yatzy");
-			System.out.println("(10) GÂ tillbaka");
+			System.out.println("(10) G√• tillbaka");
 			System.out.print("\nSkriv in ditt val: ");
 			choice = scan.nextLine();
 
 
 
-			switch(choice) {   //tar in anv√§ndarens input
+			switch(choice) {   //tar in anv√É¬§ndarens input
 			case("1"):                
 				GameRules.howToPLay();
 			break;
@@ -162,10 +163,11 @@ public class Menu {
 				GameRules.yatzy();
 			break;
 			case("10"):
-				startMenu();
-			break;
+                                return;
+//				startMenu();
+//			break;
 			default:
-				System.out.println("Fel v‰rde (tips 1-10)");    
+				System.out.println("Fel v√§rde (tips 1-10)");    
 			}
 		}
 		while(!choice.equals("10"));

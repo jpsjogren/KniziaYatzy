@@ -1,6 +1,6 @@
 package program;
 
-// implements simplistic terminal menus for 1 to 35 items,
+// implements simplistic terminal menus for 1 to 25 items,
 // optionally with multiple choice and a default choice
 //
 //int menu(String... items)
@@ -54,17 +54,17 @@ public class GameFlowMenu {
 	int i = 0;
 	for (String s : entry) {
 	    ++i;
-	    System.out.println("("+Integer.toString(i,36)+") "+s);
+	    System.out.println("("+Integer.toString(i+9,36)+") "+s);
 	}
 	if (entry.length > 1) {
-	    System.out.print("Ange 1-"+Integer.toString(i,36));
+	    System.out.print("Ange a-"+Integer.toString(i+9,36));
 	} else {
-	    System.out.print("Ange 1");
+	    System.out.print("Ange a");
 	}
 	if (default_choice != null && default_choice.length !=0 && default_choice[0] != 0) {
 	    System.out.print(", bara Enter för (");
 	    for (int ii=0; ii<default_choice.length; ++ii) {
-		System.out.print(Integer.toString(default_choice[ii],36));
+		System.out.print(Integer.toString((default_choice[ii]+9),36));
 	    }
 	    System.out.print(")");
 	}
@@ -86,11 +86,11 @@ public class GameFlowMenu {
 	for (i=0; i<s.length(); ++i) {
 	    int onechoice;
 	    try {
-		onechoice = Integer.parseInt(s.substring(i, i+1), 36);
+		onechoice = Integer.parseInt(s.substring(i, i+1), 36) - 9;
 	    } catch (NumberFormatException e) {
 		onechoice = -1;
 	    }
-	    if (onechoice == 0) {
+	    if (onechoice == -9) {
 		return new int[] {};
 	    }
 	    if (onechoice < 0 || onechoice > menulength) {

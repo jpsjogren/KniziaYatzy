@@ -48,12 +48,12 @@ public class GameFlowDiceCasting {
 	    return false;
 	}
 	int[] menu_choices = GameFlowMenu.menu(5, new int[] {},
-		"hålla tärning med "+dices[0],
-		"hålla tärning med "+dices[1],
-		"hålla tärning med "+dices[2],
-		"hålla tärning med "+dices[3],
-		"hålla tärning med "+dices[4],
-		"acceptera läget");
+		"ändra hålla-läget på tärning med "+dices[0],
+		"ändra hålla-läget på tärning med "+dices[1],
+		"ändra hålla-läget på tärning med "+dices[2],
+		"ändra hålla-läget på tärning med "+dices[3],
+		"ändra hålla-läget på tärning med "+dices[4],
+		"acceptera utfallet utan att kasta om");
 	// check whether the player indicated "acceptera" somewhere
 	// in the answer, even if the corresponding choice was not
 	// first in the multiple-choice answer string, like "236" :

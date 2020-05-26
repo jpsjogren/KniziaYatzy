@@ -5,11 +5,7 @@ public class GameRules {
 	public static void howToPLay() {
 
 		System.out.println(
-"Man börjar alltid med att bestämma vilken spelare som ska börja.\r\n" +
-"Det sker genom att man tar en tärning som varje spelare får slå.\r\n" +
-"Den spelare som slår högst börjar och sedan går man medurs oavsett\r\n" +
-"hur höga tal de andra spelarna fått på tärningen.\r\n" +
-"\r\n" +
+
 "När det är en spelares tur tar denne alla fem tärningarna i en hand och\r\n" +
 "slår dem. Det gäller sedan att se vilka prickar tärningarna visar för\r\n" +
 "att få en hög poäng. Det är värt att komma ihåg att spelaren vid\r\n" +

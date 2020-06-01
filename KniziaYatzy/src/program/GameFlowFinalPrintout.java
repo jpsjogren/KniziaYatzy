@@ -24,7 +24,8 @@ public class GameFlowFinalPrintout {
             System.out.println();
         }
 // the final sum
-        System.out.format("%15s", "GRAND TOTAL:");
+        //changed GRAND TOTAL TO Totalt
+        System.out.format("%15s", "Totalt:");
         for (int player_number=0; player_number<number_of_players; ++player_number) {
             int sum = 0;
             for (int rule_number=0; rule_number<p[0].number_of_rules(); ++rule_number) {

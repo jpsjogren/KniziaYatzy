@@ -6,24 +6,21 @@ package program;
 //int menu(String... items)
 //returns the choice (numbered from 1)
 //or 1 if the "default" alternative is chosen
-//or 0 if the "no choice" alternative is chosen
 //
 //int menu(int default_choice, String... items)
 //returns the choice (numbered from 1)
 //or the default choice value if the "default" alternative is chosen
-//or 0 if the "no choice" alternative is chosen
 //
 //int[] menu(int max_choices, int[] default_choice, String... items)
 //returns an int array of size up to max_choices and in its elements the choices (numbered from 1)
 //or the default choice array if the "default" alternative is chosen
-//or an int array of size 0 if the "no choice" alternative is chosen
 //
 
 import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.Arrays;
 
-public class GameFlowMenu {
+public class GenericMenu {
     // -------------------------------------------------------------- //
     public static int[] menu(int max_number_of_choices, int[] default_choice, String... entry) {
 	int[] res;
@@ -38,9 +35,6 @@ public class GameFlowMenu {
 	int dc[] = new int[1];
 	dc[0] = default_choice;
 	int[] res = menu(1, dc, entry); // single choice
-	if (res.length == 0) {
-	    return 0;
-	}
 	return res[0];
     }
     // -------------------------------------------------------------- //
@@ -61,7 +55,7 @@ public class GameFlowMenu {
 	} else {
 	    System.out.print("Ange a");
 	}
-	if (default_choice != null && default_choice.length !=0 && default_choice[0] != 0) {
+	if (default_choice != null && default_choice.length !=0) {
 	    System.out.print(", bara Enter för (");
 	    for (int ii=0; ii<default_choice.length; ++ii) {
 		System.out.print(Integer.toString((default_choice[ii]+9),36));
@@ -71,11 +65,7 @@ public class GameFlowMenu {
 	if (maxchoices > 1) {
 	    System.out.print(", upp till "+maxchoices+" val utan mellanslag");
 	}
-	if (default_choice != null && default_choice.length !=0 && default_choice[0] != 0) {
-	    System.out.println(", eller 0 för inget val");
-	} else {
-	    System.out.println(", eller bara Enter för inget val");
-	}
+	System.out.println();
     }
     // .............................................................. //
     private static int[] choose(int menulength, int d[], int m) {

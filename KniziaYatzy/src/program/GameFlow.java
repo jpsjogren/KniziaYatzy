@@ -43,7 +43,7 @@ public class GameFlow {
 // ---------- VISA MENY SOM GENERERAS FRÅN TOMMA PLATSER
 // ---------- I ANVÄNDARENS KOLUMN I PROTOKOLLET
                 System.out.println("Vilken regel ska resultatet andvändas med:");
-                int rule_choice = GameFlowMenu.menu(rr.rule_names);
+                int rule_choice = GenericMenu.menu(rr.rule_names);
                 if (rule_choice == 0) {
                     System.out.println("Beklagligt att du "+p[player_number].player_name()+" inte ville fortsätta...");
                     return;
@@ -54,11 +54,11 @@ public class GameFlow {
                 System.out.println(p[player_number].player_name()+" får "+score+" poäng i "+rr.rules[rule_index_to_store_into].rule_name());
 // ---------- OCH SPARA DET I PROTOKOLLET
                 rr.rules[rule_index_to_store_into].store(score);
+// ---------- OCH VISA LÄGET
+                GameFlowPrintout.printout(p, number_of_players);
             }
         } while (rr.rules.length != 0); // game over?
 // ---------- SKRIVA UT RESULTATET
-// rules Sum and Bonus are to be applied explicitly
-        GameFlowCalculateSumBonus.calculate(p, number_of_players);
-        GameFlowFinalPrintout.final_printout(p, number_of_players);
+        GameFlowPrintout.printout(p, number_of_players);
     }
 }

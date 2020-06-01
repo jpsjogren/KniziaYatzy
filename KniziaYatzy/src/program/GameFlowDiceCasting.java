@@ -47,7 +47,7 @@ public class GameFlowDiceCasting {
         if (castnr == 3) {
             return false;
         }
-        int[] menu_choices = GameFlowMenu.menu(5, new int[] {},
+        int[] menu_choices = GenericMenu.menu(5, new int[] {},
 "hålla tärning med "+dices[0],
 "hålla tärning med "+dices[1],
 "hålla tärning med "+dices[2],

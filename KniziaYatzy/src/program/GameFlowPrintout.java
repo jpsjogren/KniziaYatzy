@@ -29,7 +29,7 @@ public class GameFlowPrintout {
             System.out.println();
         }
 // the final sum
-        System.out.format("%15s", "GRAND TOTAL:");
+        System.out.format("%15s", "Totalt:");
         int[] places = new int[number_of_players];
         int[] sums = new int[number_of_players];
         for (int i=0; i<number_of_players; ++i) {
@@ -58,7 +58,7 @@ public class GameFlowPrintout {
             sums[player_number] = sum;
         }
         System.out.println();
-        System.out.format("%15s", "Platserna:");
+        System.out.format("%15s", "Plats:");
         for (int player_number=0; player_number<number_of_players; ++player_number) {
             System.out.format("%15d", places[player_number]);
         }

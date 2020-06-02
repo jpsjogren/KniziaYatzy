@@ -17,9 +17,9 @@ public class Player {
     }    
     
 
-    public int getPlayerScore() {
-        return score;
-    }
+//    public int getPlayerScore() {
+//        return score;
+//    }
 
     public void setPlayerScore(int[] score) {
         this.score = score;

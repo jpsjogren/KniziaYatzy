@@ -21,6 +21,7 @@ import java.util.TreeSet;
 import java.util.Arrays;
 
 public class GenericMenu {
+    private static Scanner scanner;
     // -------------------------------------------------------------- //
     public static int[] menu(int max_number_of_choices, int[] default_choice, String... entry) {
 	int[] res;
@@ -69,7 +70,7 @@ public class GenericMenu {
     }
     // .............................................................. //
     private static int[] choose(int menulength, int d[], int m) {
-	Scanner scanner = new Scanner(System.in);
+	scanner = new Scanner(System.in);
 	String s = scanner.nextLine();
 	TreeSet<Integer> ss = new TreeSet<Integer>();
 	int i;

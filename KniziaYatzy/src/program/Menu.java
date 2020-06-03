@@ -6,7 +6,6 @@ public class Menu {
 
 	private static String choice;
 	private static Scanner scan = new Scanner(System.in);
-	static GamePlay play = new GamePlay();
 
 	public void startMenu() throws Exception {
 
@@ -84,88 +83,10 @@ public class Menu {
 			break;
 			case("10"):
                                 return;
-//				startMenu();
-//			break;
 			default:
 				System.out.println("Fel värde (tips 1-10)");    
 			}
 		}
-		while(!choice.equals("10"));
-
+		while(true);
 	}
-
-
-	public void interactionMenu() {		
-		//GamePlay play = new GamePlay(); 
-
-
-		//Scanner scan = new Scanner(System.in);            
-		System.out.println("Tryck enter för att börja omgången");
-		scan.nextLine();
-		play.game();
-
-	}
-
-	public String roundMenu() {
-		System.out.println("Vilka tärningar vill du spara?");
-		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
-		String input = scan.nextLine();		
-
-		return input;
-
-	}
-
-	//	public static void errorRoundMenu(String error) {
-	//		System.out.println(error);
-	//		roundMenu();
-	//		
-	//	}
-
-	public String roundMenu(String error) {
-		System.out.println(error);
-		System.out.println("Vilka tärningar vill du spara?");
-		System.out.println("(Använd siffrorna på tärningarna och space för att seperera dem)");
-
-		String input = scan.nextLine();			
-		return input;
-
-	}
-
-/*
-	public void playerMenu() {
-		boolean correct = true;
-		do {
-			System.out.println("Hur många spelare är ni? ");
-			
-			System.out.println("(1) Flera spelare");
-			System.out.println("(2) Gå tillbaka"); 
-			System.out.print("\nSkriv in ditt val: ");
-			choice = scan.nextLine();
-			
-			switch(choice) {   //tar in användarens input
-			case("1"): 
-				play.setNumberOfPlayers(1);
-				interactionMenu();
-			break;
-			case("2"):                
-				play.setNumberOfPlayers(2);				
-				interactionMenu();
-			break;
-			case("3"):                
-				play.setNumberOfPlayers(3);				
-				interactionMenu();
-			break;
-			case("4"):                
-				play.setNumberOfPlayers(4);				
-				interactionMenu();
-			break;			
-			default:
-				correct = false;
-				System.out.println("Fel värde (tips 1-4)");    
-			}
-		}
-		while(!correct);
-	}
-*/
-
 }

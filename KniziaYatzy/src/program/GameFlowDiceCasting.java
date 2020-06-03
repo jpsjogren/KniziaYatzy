@@ -8,6 +8,7 @@ public class GameFlowDiceCasting {
     private int dices[] = new int[5];
     private boolean on_hold[] = { false, false, false, false, false };
     private int castnr = 0;
+    boolean is_abandoned = false;
 // -------------------------------------------------------------- //
     public GameFlowDiceCasting(Scanner input) {
 // ---------- MARKERA ALLA TÄRNINGAR SOM FRIA
@@ -19,6 +20,10 @@ public class GameFlowDiceCasting {
 // ---------- VISA MENY FÖR ATT MARKERA OM VILKA TÄRNINGAR SKA HÅLLAS alt. ACCEPTERA LÄGET
 // ---------- ÄR OMGÅNGEN MINDRE ÄN TRE OCH LÄGET INTE ACCEPTERAT?
         } while (pick_hold(input)); // this has to implement the dialogue
+    }
+// -------------------------------------------------------------- //
+    public boolean abandoned() {
+        return is_abandoned;
     }
 // -------------------------------------------------------------- //
     public int[] data() {
@@ -37,6 +42,7 @@ public class GameFlowDiceCasting {
 // .............................................................. //
     private void show() {
         int i;
+        System.out.print("I omgång nr " +castnr +" har du fått:  ");
         for (i=0; i<dices.length-1; ++i) {
             System.out.print(dices[i] + " ");
         }
@@ -47,20 +53,25 @@ public class GameFlowDiceCasting {
         if (castnr == 3) {
             return false;
         }
-        int[] menu_choices = GameFlowMenu.menu(5, new int[] {},
+        int[] menu_choices = GenericMenu.menu(5, new int[] {},
 "hålla tärning med "+dices[0],
 "hålla tärning med "+dices[1],
 "hålla tärning med "+dices[2],
 "hålla tärning med "+dices[3],
 "hålla tärning med "+dices[4],
-"acceptera utfallet utan att kasta om");
+"acceptera utfallet utan att kasta om",
+"--- återgå till huvudmenyn");
         for (int i=0; i<on_hold.length; ++i) {
             on_hold[i] = false;
         }
-// check whether the player indicated "acceptera" somewhere
-// in the answer, even if the corresponding choice was not
-// first in the multiple-choice answer string, like "236" :
+// check whether the player indicated "acceptera" or "återgå"
+// somewhere in the answer, even if the corresponding choice was
+// not first in the multiple-choice answer string, like "bcfg" :
         for (int i=0; i<menu_choices.length; ++i) {
+            if (menu_choices[i] == 7) {
+                is_abandoned = true;
+                return false;
+            }
             if (menu_choices[i] == 6) {
                 return false;
             }

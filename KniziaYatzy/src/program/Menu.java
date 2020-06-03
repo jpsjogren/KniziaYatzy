@@ -8,19 +8,16 @@ public class Menu {
 	private static Scanner scan = new Scanner(System.in);
 	static GamePlay play = new GamePlay();
 
-
 	public void startMenu() throws Exception {
 
 		do {
 			//Scanner scan = new Scanner(System.in);
-			System.out.println("YATZY");
+			System.out.println("Välj ett alternativ:");
 			System.out.println("(1) Starta spelet");
 			System.out.println("(2) Regler");
 			System.out.println("(3) Avsluta");            
-			System.out.print("\nSkriv in ditt val: ");
+			System.out.print("Ditt val: ");
 			choice = scan.nextLine();
-
-
 
 			switch(choice) {   //tar in användarens input
 			case("1"): 
@@ -39,6 +36,63 @@ public class Menu {
 		while(!choice.equals("3"));
 	}
 
+	public void ruleMenu() {
+
+		do {
+			System.out.println("Spelregler:");
+			System.out.println("===========");
+			System.out.println("(1) Hur spelar man?");
+			System.out.println("(2) Protokollets övre del");
+			System.out.println("(3) Bonus");  
+			System.out.println("(4) Protokollets undre del");
+			System.out.println("(5) Tretal och fyrtal");
+			System.out.println("(6) Stegar, eller stor samt liten straight");
+			System.out.println("(7) Kåk");
+			System.out.println("(8) Chans");
+			System.out.println("(9) Yatzy");
+			System.out.println("(10) Gå tillbaka till huvudmenyn");
+			System.out.print("Ditt val: ");
+			choice = scan.nextLine();
+
+			switch(choice) {   //tar in användarens input
+			case("1"):                
+				GameRules.howToPLay();
+			break;
+			case("2"):                
+				GameRules.protocolUpperPart();
+			break;
+			case("3"):
+				GameRules.bonus();
+			break;
+			case("4"):
+				GameRules.protocolDownPart();
+			break;
+			case("5"):
+				GameRules.threesAndFoursome();
+			break;
+			case("6"):
+				GameRules.laddersOrStraightFlush();
+			break;
+			case("7"):
+				GameRules.fullHouse();
+			break;
+			case("8"):
+				GameRules.chance();
+			break;
+			case("9"):
+				GameRules.yatzy();
+			break;
+			case("10"):
+                                return;
+//				startMenu();
+//			break;
+			default:
+				System.out.println("Fel värde (tips 1-10)");    
+			}
+		}
+		while(!choice.equals("10"));
+
+	}
 
 
 	public void interactionMenu() {		
@@ -113,67 +167,5 @@ public class Menu {
 		while(!correct);
 	}
 */
-	public void ruleMenu() {
-
-		do {
-
-
-			System.out.println("Spelregler:");
-			System.out.println("(1) Hur spelar man?");
-			System.out.println("(2) Protokollets övre del");
-			System.out.println("(3) Bonus");  
-			System.out.println("(4) Protokollets undre del");
-			System.out.println("(5) Tretal och fyrtal");
-			System.out.println("(6) Stegar, eller stor samt liten straight");
-			System.out.println("(7) Kåk");
-			System.out.println("(8) Chans");
-			System.out.println("(9) Yatzy");
-			System.out.println("(10) Gå tillbaka");
-			System.out.print("\nSkriv in ditt val: ");
-			choice = scan.nextLine();
-
-
-
-			switch(choice) {   //tar in anvÃ¤ndarens input
-			case("1"):                
-				GameRules.howToPLay();
-			break;
-			case("2"):                
-				GameRules.protocolUpperPart();
-			break;
-			case("3"):
-				GameRules.bonus();
-			break;
-			case("4"):
-				GameRules.protocolDownPart();
-			break;
-			case("5"):
-				GameRules.threesAndFoursome();
-			break;
-			case("6"):
-				GameRules.laddersOrStraightFlush();
-			break;
-			case("7"):
-				GameRules.fullHouse();
-			break;
-			case("8"):
-				GameRules.chance();
-			break;
-			case("9"):
-				GameRules.yatzy();
-			break;
-			case("10"):
-                                return;
-//				startMenu();
-//			break;
-			default:
-				System.out.println("Fel värde (tips 1-10)");    
-			}
-		}
-		while(!choice.equals("10"));
-
-	}
-
-
 
 }

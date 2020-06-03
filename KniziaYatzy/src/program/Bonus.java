@@ -5,7 +5,7 @@ package program;
 public class Bonus extends SaveScore implements Rule {
 
     public String rule_name() {
-        return "Bonus";
+        return "BONUS";
     }
     public String rule_description() {
         return "50 extra poäng om minst 63 finns";

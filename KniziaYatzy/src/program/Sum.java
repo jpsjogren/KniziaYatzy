@@ -5,7 +5,7 @@ package program;
 public class Sum extends SaveScore implements Rule {
 
     public String rule_name() {
-        return "Subtotal"; // var "Summan hittills"
+        return "SUBTOTALT";
     }
     public String rule_description() {
         return "Summan av resultat efter de första 6 steg";

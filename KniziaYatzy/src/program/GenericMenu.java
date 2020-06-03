@@ -32,11 +32,31 @@ public class GenericMenu {
 	return res;
     }
     // -------------------------------------------------------------- //
+    public static int menu(String extra_arg, int default_choice, String... entry) {
+        int[] dc;
+        if (default_choice == 0) {
+            dc = null;
+        } else {
+	    dc = new int[1];
+	    dc[0] = default_choice;
+        }
+        String[] bigger_menu = new String[entry.length+1];
+        for (int i=0; i<entry.length; ++i) {
+            bigger_menu[i] = entry[i];
+        }
+        bigger_menu[entry.length] = extra_arg;
+	return menu(1, dc, bigger_menu)[0]; // single choice
+    }
+    // -------------------------------------------------------------- //
     public static int menu(int default_choice, String... entry) {
-	int dc[] = new int[1];
-	dc[0] = default_choice;
-	int[] res = menu(1, dc, entry); // single choice
-	return res[0];
+        int[] dc;
+        if (default_choice == 0) {
+            dc = null;
+        } else {
+	    dc = new int[1];
+	    dc[0] = default_choice;
+        }
+	return menu(1, dc, entry)[0]; // single choice
     }
     // -------------------------------------------------------------- //
     public static int menu(String... entry) {
@@ -46,13 +66,16 @@ public class GenericMenu {
     // radix 36 is for 0-9 then a-z
     // .............................................................. //
     private static void visualise(int maxchoices, int[] default_choice, String... entry) {
-	int i = 0;
-	for (String s : entry) {
-	    ++i;
-	    System.out.println("("+Integer.toString(i+9,36)+") "+s);
-	}
-	if (entry.length > 1) {
-	    System.out.print("Ange a-"+Integer.toString(i+9,36));
+	int i;
+        for (i = 0; i < entry.length; ++i) {
+            System.out.println("("+Integer.toString(i+10,36)+") "+entry[i]);
+        }
+	if (i > 1) {
+            if (maxchoices > 1) {
+	        System.out.print("Ange utan mellanslag upp till "+maxchoices+" bokstäver ur intervallet a till "+Integer.toString(i+9,36));
+            } else {
+	        System.out.print("Ange en bokstav ur intervallet a till "+Integer.toString(i+9,36));
+            }
 	} else {
 	    System.out.print("Ange a");
 	}
@@ -63,10 +86,8 @@ public class GenericMenu {
 	    }
 	    System.out.print(")");
 	}
-	if (maxchoices > 1) {
-	    System.out.print(", upp till "+maxchoices+" val utan mellanslag");
-	}
 	System.out.println();
+ 	System.out.print("Ditt val: ");
     }
     // .............................................................. //
     private static int[] choose(int menulength, int d[], int m) {
@@ -95,6 +116,9 @@ public class GenericMenu {
 	    }
 	}
 	if (i == 0) {
+            if (d == null) {
+                System.out.println("Du måste välja något utav listan:");
+            }
 	    return d;
 	}
 	int[] r = new int[ss.size()];

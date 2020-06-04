@@ -25,6 +25,10 @@ public class GameFlowPlayerList {
                     break;
                 }
             }
+            if (s.length() > 14) {
+                System.out.println("--Vänligen ange ett kortare namn--");
+        	continue;
+            }
             p[number_of_players++] = new Protocol(s); // initialiseras respektive kolumn i protokollet
         }
         return number_of_players;

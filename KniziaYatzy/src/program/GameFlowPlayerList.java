@@ -26,8 +26,13 @@ public class GameFlowPlayerList {
                 }
             }
             if (s.length() > 14) {
-                System.out.println("--Vänligen ange ett kortare namn--");
-        	continue;
+                if (number_of_players == 0) {
+                    System.out.println("--Vänligen ange ett kortare namn--");
+                    System.out.println("--inom------------>|..............|");
+                } else {
+                    System.out.println("--Vänligen ange ett kortare namn, inom---->|..............|");
+                }
+                continue;
             }
             p[number_of_players++] = new Protocol(s); // initialiseras respektive kolumn i protokollet
         }

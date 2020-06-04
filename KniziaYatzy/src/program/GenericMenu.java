@@ -102,9 +102,6 @@ public class GenericMenu {
 	    } catch (NumberFormatException e) {
 		onechoice = -1;
 	    }
-	    if (onechoice == -9) {
-		return new int[] {};
-	    }
 	    if (onechoice < 0 || onechoice > menulength) {
 		System.out.println("Ett opassande tecken: '"+s.substring(i, i+1)+"'");
 		return null;

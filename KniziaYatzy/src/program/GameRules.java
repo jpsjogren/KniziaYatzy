@@ -131,12 +131,7 @@ public class GameRules {
 "samman. Maxsumman på chansen är 30 och den summan får spelaren genom\r\n" +
 "att slå fem sexor.\r\n" +
 "\r\n" +
-"Det sker dock inte fullt så ofta. Det är viktigt att komma ihåg\r\n" +
-"att spelaren inte får använda chansfältet innan den övre delen av\r\n" +
-"protokollet är färdigspelad.\r\n" +
-"\r\n" +
-"Efter det kan dock spelaren använda fältet precis när denne\r\n" +
-"vill. Många gånger är det ett sätt att slippa stryka något.\r\n" +
+"Det sker dock inte fullt så ofta. Många gånger är det ett sätt att slippa stryka något.\r\n" +
 "");
 	}
 

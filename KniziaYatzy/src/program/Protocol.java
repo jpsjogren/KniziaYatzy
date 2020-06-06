@@ -28,6 +28,8 @@ package program;
 // in examples below: Protocol p, Rule r, int[] dices, int rulenum
 //----------------------------
 //int p.calculate(rulenum, dices);
+//int p.get_casts();
+//int p.set_casts();
 //int r.calculate(p, dices);
 //----------------------------
 //// when needed, read score from a rule:
@@ -61,10 +63,12 @@ public class Protocol {
     private final int the_number_of_rules = 17;
 // .............................................................. //
     private String the_player_name;
+    private int saved_casts;
 
 // -------------------------------------------------------------- //
     public Protocol(String player) throws Exception {
         the_player_name = player;
+        saved_casts = 0;
         rules = new Rule[the_number_of_rules];
         int i = 0;
         rules[i++] = new Ones();
@@ -91,6 +95,14 @@ public class Protocol {
 // -------------------------------------------------------------- //
     public String player_name() {
 	return the_player_name;
+    }
+// -------------------------------------------------------------- //
+    public int get_casts() {
+	return saved_casts;
+    }
+// -------------------------------------------------------------- //
+    public void set_casts(int to_save) {
+	saved_casts = to_save;
     }
 // -------------------------------------------------------------- //
     public int number_of_rules() {

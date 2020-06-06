@@ -40,11 +40,12 @@ public class GameFlow {
 // ---------- VISA TÄRNINGARNAS INNEHÅLL
 // ---------- VISA MENY FÖR ATT MARKERA OM VILKA TÄRNINGAR SKA HÅLLAS alt. ACCEPTERA LÄGET
 // ---------- SÅ LÄNGE OMGÅNGEN ÄR MINDRE ÄN TRE OCH LÄGET INTE ÄR ACCEPTERAT
-                GameFlowDiceCasting dices = new GameFlowDiceCasting(input);
+                GameFlowDiceCasting dices = new GameFlowDiceCasting(input, p[player_number].get_casts());
                 if (dices.abandoned()) {
                     System.out.println("Beklagligt att du "+p[player_number].player_name()+" inte ville fortsätta...");
                     return;
                 }
+                p[player_number].set_casts(dices.remaining_casts());
 // ---------- VISA MENY SOM GENERERAS FRÅN TOMMA PLATSER
 // ---------- I ANVÄNDARENS KOLUMN I PROTOKOLLET
                 System.out.println("Vilken regel ska resultatet andvändas med:");

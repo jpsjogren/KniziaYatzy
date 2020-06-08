@@ -8,7 +8,7 @@ public class GameFlowDiceCasting {
     private int dices[] = new int[5];
     private boolean on_hold[] = { false, false, false, false, false };
     private int castnr = 0;
-    boolean is_abandoned = false;
+    private boolean is_abandoned = false;
 // -------------------------------------------------------------- //
     public GameFlowDiceCasting(Scanner input) {
 // ---------- MARKERA ALLA TÄRNINGAR SOM FRIA

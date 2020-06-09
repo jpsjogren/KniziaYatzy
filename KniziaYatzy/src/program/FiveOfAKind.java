@@ -1,14 +1,12 @@
-// Lower Section ThreeOfAKind Rule (#10) implementation
-
 package program;
 
-public class ThreeOfAKind extends SaveScore implements Rule {
+public class FiveOfAKind extends SaveScore implements Rule {
 
     public String rule_name() {
-        return "Tretal";
+        return "Femtal";
     }
     public String rule_description() {
-        return "Summan av tre tärningar med samma tal";
+        return "Summan av fem tärningar med samma tal";
     }
 
     public boolean cast_is_needed() {
@@ -21,7 +19,7 @@ public class ThreeOfAKind extends SaveScore implements Rule {
                 if (dices[one_dice] == dices[another_dice]) {
                     for (int third_dice=another_dice+1; third_dice<6; ++third_dice) {
                         if (dices[one_dice] == dices[third_dice]) {
-                            return dices[one_dice] * 3;
+                            return dices[one_dice] * 5;
                         }
                     }
                 }
@@ -29,19 +27,18 @@ public class ThreeOfAKind extends SaveScore implements Rule {
         }
         return 0;
     }
-
-// alternativt
+    
+ // alternativt
     public int calculate(Protocol protocol, int[] dices) {
         int hits[] = { 0, 0, 0, 0, 0, 0, 0 };
         for (int dice=0; dice<6; ++dice) {
             ++hits[dices[dice]];
         }
         for (int i=1; i<7; ++i) {
-            if (hits[i] >= 3) {
-                return i * 3;
+            if (hits[i] >= 5) {
+                return i * 5;
             }
         }
         return 0;
     }
-}
-
+}    

@@ -58,7 +58,7 @@ public class Protocol {
                           // its own specific metadata as name and description,
                           // and its own "store-once" score storage slot
 // .............................................................. //
-    private final int the_number_of_rules = 18;
+    private final int the_number_of_rules = 19;
 // .............................................................. //
     private String the_player_name;
 

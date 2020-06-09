@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class GameFlowDiceCasting {
 
-    private int dices[] = new int[5];
-    private boolean on_hold[] = { false, false, false, false, false };
+    private int dices[] = new int[6];
+    private boolean on_hold[] = { false, false, false, false, false, false };
     private int castnr = 0;
     private boolean is_abandoned = false;
 // -------------------------------------------------------------- //
@@ -53,12 +53,13 @@ public class GameFlowDiceCasting {
         if (castnr == 3) {
             return false;
         }
-        int[] menu_choices = GenericMenu.menu(5, new int[] {},
+        int[] menu_choices = GenericMenu.menu(6, new int[] {},
 "hålla tärning med "+dices[0],
 "hålla tärning med "+dices[1],
 "hålla tärning med "+dices[2],
 "hålla tärning med "+dices[3],
 "hålla tärning med "+dices[4],
+"hålla tärning med "+dices[5],
 "acceptera utfallet utan att kasta om",
 "--- återgå till huvudmenyn");
         for (int i=0; i<on_hold.length; ++i) {
@@ -68,11 +69,11 @@ public class GameFlowDiceCasting {
 // somewhere in the answer, even if the corresponding choice was
 // not first in the multiple-choice answer string, like "bcfg" :
         for (int i=0; i<menu_choices.length; ++i) {
-            if (menu_choices[i] == 7) {
+            if (menu_choices[i] == 8) {
                 is_abandoned = true;
                 return false;
             }
-            if (menu_choices[i] == 6) {
+            if (menu_choices[i] == 7) {
                 return false;
             }
 // it is safe to do this in the same common loop:

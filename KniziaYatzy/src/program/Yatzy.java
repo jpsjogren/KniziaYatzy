@@ -19,12 +19,12 @@ public class Yatzy extends SaveScore implements Rule {
 
     public int calculate(Protocol protocol, int[] dices) {
         int hits[] = { 0, 0, 0, 0, 0, 0, 0 };
-        for (int dice=0; dice<5; ++dice) {
+        for (int dice=0; dice<6; ++dice) {
             ++hits[dices[dice]];
         }
         Arrays.sort(hits);
         if (hits[6] == 5) {
-            return 50;
+            return 100;
         }
         return 0;
     }

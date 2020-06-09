@@ -17,7 +17,7 @@ public class Fours extends SaveScore implements Rule {
 
     public int calculate(Protocol protocol, int[] dices) {
         int result = 0;
-        for (int i=0; i<5; ++i) {
+        for (int i=0; i<6; ++i) {
             if (dices[i] == 4) {
                 result += 4;
             }

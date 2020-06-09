@@ -17,7 +17,7 @@ public class FourOfAKind extends SaveScore implements Rule {
 
     public int calculate(Protocol protocol, int[] dices) {
         int hits[] = { 0, 0, 0, 0, 0, 0, 0 };
-        for (int dice=0; dice<5; ++dice) {
+        for (int dice=0; dice<6; ++dice) {
             ++hits[dices[dice]];
         }
         for (int i=1; i<7; ++i) {

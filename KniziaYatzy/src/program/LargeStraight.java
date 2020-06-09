@@ -28,4 +28,3 @@ public class LargeStraight extends SaveScore implements Rule {
         return 20;
     }
 }
-

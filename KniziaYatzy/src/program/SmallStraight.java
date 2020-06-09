@@ -16,7 +16,7 @@ public class SmallStraight extends SaveScore implements Rule {
     }
 
     public int calculate(Protocol protocol, int[] dices) {
-        int hits[] = { 0, 0, 0, 0, 0, 0, 0 };
+        int hits[] = { 0, 0, 0, 0, 0, 0, 0};
         for (int dice=0; dice<5; ++dice) {
             ++hits[dices[dice]];
         }

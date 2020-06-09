@@ -44,7 +44,6 @@ public class HighScore {
 	}
 	
 	public static void showTopTenResults() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
-		
 
 		try {
 			System.out.println("");

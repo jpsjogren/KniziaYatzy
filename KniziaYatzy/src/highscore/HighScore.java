@@ -32,7 +32,7 @@ public class HighScore {
 	public static void Connect() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-	    	conn = DriverManager.getConnection("jdbc:mysql://192.168.1.235/highscore?" +
+	    	conn = DriverManager.getConnection("jdbc:mysql://untower.duckdns.org/highscore?" +
 	    		                                   "user=knizia&password=123");
 		} catch (SQLException ex) {
 	        // handle any errors

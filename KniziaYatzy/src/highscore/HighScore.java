@@ -47,12 +47,14 @@ public class HighScore {
 		
 
 		try {
+			System.out.println("");
 			Connect();
 			String query = "SELECT * FROM test ORDER BY score DESC LIMIT 10";
 			java.sql.Statement st = conn.createStatement();
 	    	ResultSet rs = st.executeQuery(query);
 	    	int i = 0;
-	    	System.out.format("Placering \tNamn \tResultat \tdatum \n");
+	    	String rubrik = String.format("%-10s %-16s %-12s %s", "Placering", "Namn", "Resultat", "Datum");
+	    	System.out.println(rubrik);
 	    	while (rs.next())
 	        {
 	    		int place = i + 1;
@@ -63,10 +65,12 @@ public class HighScore {
 	    		java.util.Date date = ts;
 	    		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 	    		String time = formatter.format(date);
-
-		        System.out.format("%s \t\t%s \t%s \t\t%s \n", place, name , score, time);
+	    		String foo = String.format("%-10s %-16s %-12s %s", place, name, score, time);
+	    		System.out.println(foo);
+		        //System.out.format("%s \t\t%s \t%s \t\t%s \n", place, name , score, time);
 		        i++;
 	        }
+	    	System.out.println("");
 	    	st.close();
 		}
     	catch (SQLException ex) {

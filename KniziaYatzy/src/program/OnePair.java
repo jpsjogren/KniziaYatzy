@@ -17,9 +17,9 @@ public class OnePair extends SaveScore implements Rule {
 
     public int calculate(Protocol protocol, int[] dices) {
         int max_eligible = 0;
-        for (int one_dice=0; one_dice<4; ++one_dice) {
+        for (int one_dice=0; one_dice<6; ++one_dice) {
             if (dices[one_dice] > max_eligible) {
-                for (int another_dice=one_dice+1; another_dice<5; ++another_dice) {
+                for (int another_dice=one_dice+1; another_dice<6; ++another_dice) {
                     if (dices[one_dice] == dices[another_dice]) {
                         max_eligible = dices[one_dice];
                     }

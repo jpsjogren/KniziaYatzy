@@ -17,7 +17,7 @@ public class Chance extends SaveScore implements Rule {
 
     public int calculate(Protocol protocol, int[] dices) {
         int sum = 0;
-        for (int dice=0; dice<5; ++dice) {
+        for (int dice=0; dice<6; ++dice) {
             sum += dices[dice];
         }
         return sum;

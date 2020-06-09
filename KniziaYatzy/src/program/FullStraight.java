@@ -1,14 +1,13 @@
-// Lower Section LargeStraight Rule (#13) implementation
-
 package program;
 
-public class LargeStraight extends SaveScore implements Rule {
+public class FullStraight extends SaveScore implements Rule {
 
+    static final int korvbiten = 21; // 25 according to a different authority
     public String rule_name() {
-        return "Stor stege";
+        return "Full stege";
     }
     public String rule_description() {
-        return "2+3+4+5+6 => 20 poäng";
+        return "1+2+3+4+5+6 => "+korvbiten+" poäng";
     }
 
     public boolean cast_is_needed() {
@@ -20,11 +19,11 @@ public class LargeStraight extends SaveScore implements Rule {
         for (int dice=0; dice<6; ++dice) {
             ++hits[dices[dice]];
         }
-        for (int i=2; i<=6; ++i) {
+        for (int i=1; i<=6; ++i) {
             if (hits[i] == 0) {
                 return 0;
             }
         }
-        return 20;
+        return korvbiten;
     }
 }

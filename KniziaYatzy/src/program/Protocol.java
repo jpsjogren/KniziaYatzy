@@ -79,6 +79,7 @@ public class Protocol {
         rules[i++] = new TwoPairs();
         rules[i++] = new ThreeOfAKind();
         rules[i++] = new FourOfAKind();
+        rules[i++] = new FiveOfAKind();
         rules[i++] = new SmallStraight();
         rules[i++] = new LargeStraight();
         rules[i++] = new FullStraight();

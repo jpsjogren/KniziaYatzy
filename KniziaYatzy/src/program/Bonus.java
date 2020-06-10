@@ -8,7 +8,7 @@ public class Bonus extends SaveScore implements Rule {
         return "BONUS";
     }
     public String rule_description() {
-        return "50 extra poäng om minst 75 finns";
+        return "100 extra poäng om minst 84 finns";
     }
 
     public boolean cast_is_needed() {
@@ -27,8 +27,8 @@ public class Bonus extends SaveScore implements Rule {
                 ;
             }
         }
-        if (sum >= 75) {
-            return 50;
+        if (sum >= 84) {
+            return 100;
         } else {
             return 0;
         }

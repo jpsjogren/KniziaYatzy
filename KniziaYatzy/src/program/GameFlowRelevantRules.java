@@ -9,8 +9,8 @@ public class GameFlowRelevantRules {
     public Rule[] rules;
 // -------------------------------------------------------------- //
     GameFlowRelevantRules(Protocol pp) {
-        String[] acceptable_rule_names = new String[16];
-        Rule[] acceptable_rules = new Rule[16];
+        String[] acceptable_rule_names = new String[18];
+        Rule[] acceptable_rules = new Rule[18];
         int rule_index = 0;
         for (Rule rule=pp.first_rule(); rule != null; rule=pp.next_rule(rule)) {
             if (!rule.cast_is_needed()) { // Sum and Bonus shall be skipped here

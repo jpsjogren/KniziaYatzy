@@ -10,7 +10,7 @@ public class Yatzy extends SaveScore implements Rule {
         return "Yatzy";
     }
     public String rule_description() {
-        return "Alla likadana => 50";
+        return "Alla likadana => 100";
     }
 
     public boolean cast_is_needed() {
@@ -23,7 +23,7 @@ public class Yatzy extends SaveScore implements Rule {
             ++hits[dices[dice]];
         }
         Arrays.sort(hits);
-        if (hits[6] == 5) {
+        if (hits[6] == 6) {
             return 100;
         }
         return 0;

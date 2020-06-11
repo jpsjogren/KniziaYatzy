@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Yatzy extends SaveScore implements Rule {
 
     public String rule_name() {
-        return "Yatzy";
+        return "Maxiyatzy";
     }
     public String rule_description() {
         return "Alla likadana => 100";

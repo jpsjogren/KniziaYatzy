@@ -7,10 +7,11 @@ public class GameFlowDiceCasting {
 
     private int dices[] = new int[6];
     private boolean on_hold[] = { false, false, false, false, false, false };
-    private int castnr = 0;
     private boolean is_abandoned = false;
+    private int unused_casts = 0;
 // -------------------------------------------------------------- //
-    public GameFlowDiceCasting(Scanner input) {
+    public GameFlowDiceCasting(Scanner input, int earlier_saved_casts) {
+	unused_casts = earlier_saved_casts + 3;
 // ---------- MARKERA ALLA TÄRNINGAR SOM FRIA
         do {
 // ---------- GENERERA SLUPMÄSSIGT INNEHÅLL 1 till 6 FÖR ALLA FRIA TÄRNINGAR
@@ -26,6 +27,10 @@ public class GameFlowDiceCasting {
         return is_abandoned;
     }
 // -------------------------------------------------------------- //
+    public int remaining_casts() {
+        return unused_casts;
+    }
+// -------------------------------------------------------------- //
     public int[] data() {
         return dices;
     }
@@ -37,20 +42,25 @@ public class GameFlowDiceCasting {
             }
             dices[i] = ThreadLocalRandom.current().nextInt(6) + 1;
         }
-        ++castnr;
+        --unused_casts;
     }
 // .............................................................. //
     private void show() {
         int i;
-        System.out.print("I omgång nr " +castnr +" har du fått:  ");
+        System.out.print("Du har fått [");
         for (i=0; i<dices.length-1; ++i) {
             System.out.print(dices[i] + " ");
         }
-        System.out.println(dices[i]);
+        System.out.print(dices[i]);
+        if (unused_casts > 0) {
+            System.out.println("] och kan kasta om "+unused_casts+" gång"+(unused_casts>1?"er":"")+" till");
+        } else {
+            System.out.println("]");
+        }
     }
 // .............................................................. //
     private boolean pick_hold(Scanner input) {
-        if (castnr == 3) {
+        if (unused_casts == 0) {
             return false;
         }
         int[] menu_choices = GenericMenu.menu(6, new int[] {},

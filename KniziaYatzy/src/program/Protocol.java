@@ -60,7 +60,7 @@ public class Protocol {
                           // its own specific metadata as name and description,
                           // and its own "store-once" score storage slot
 // .............................................................. //
-    private final int the_number_of_rules = 20;
+    private final int the_number_of_rules = 22;
 // .............................................................. //
     private String the_player_name;
     private int saved_casts;
@@ -81,7 +81,7 @@ public class Protocol {
         rules[i++] = new Bonus();
         rules[i++] = new OnePair();
         rules[i++] = new TwoPairs();
-        //rules[i++] = new ThreePairs();
+        rules[i++] = new ThreePairs();
         rules[i++] = new ThreeOfAKind();
         rules[i++] = new FourOfAKind();
         rules[i++] = new FiveOfAKind();
@@ -89,7 +89,7 @@ public class Protocol {
         rules[i++] = new LargeStraight();
         rules[i++] = new FullStraight();
         rules[i++] = new FullHouse();
-        //rules[i++] = new House();
+        rules[i++] = new House();
         rules[i++] = new Tower();
         rules[i++] = new Chance();
         rules[i++] = new Yatzy();

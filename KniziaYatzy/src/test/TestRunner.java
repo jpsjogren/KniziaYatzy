@@ -6,7 +6,8 @@ import org.junit.runner.notification.Failure;
 
 public class TestRunner {
    public static void main(String[] args) {
-      Result result = JUnitCore.runClasses(TestRules.class);
+      Result result = JUnitCore.runClasses(TestRules.class,
+	                                   TestHighScore.class);
 
       for (Failure failure : result.getFailures()) {
          System.out.println(failure);

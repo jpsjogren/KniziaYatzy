@@ -113,35 +113,79 @@ public class TestRules {
   }
 //---------------------------------------------------------
 @Test
-  public void testThreesRuleName() {
-    program.Rule rule = new Threes();
-    String out_data = rule.rule_name();
-    assertTrue("Unexpected rule name: "+out_data, out_data.equals("Treor"));
-  }
+public void testThreesRuleName() {
+  program.Rule rule = new Threes();
+  String out_data = rule.rule_name();
+  assertTrue("Unexpected rule name: "+out_data, out_data.equals("Treor"));
+}
 @Test
-  public void testThreesRuleDescription() {
-    program.Rule rule = new Threes();
-    String out_data = rule.rule_description();
-    assertTrue("Unexpected rule description: "+out_data, out_data.equals("Summan av alla treor"));
-  }
+public void testThreesRuleDescription() {
+  program.Rule rule = new Threes();
+  String out_data = rule.rule_description();
+  assertTrue("Unexpected rule description: "+out_data, out_data.equals("Summan av alla treor"));
+}
 @Test
-  public void testThreesCastIsNeeded() {
-    program.Rule rule = new Threes();
-    boolean out_data = rule.cast_is_needed();
-    assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
-  }
+public void testThreesCastIsNeeded() {
+  program.Rule rule = new Threes();
+  boolean out_data = rule.cast_is_needed();
+  assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
+}
 @Test
-  public void testThreesCalculate() {
-    program.Rule rule = new Threes();
-    int[] in_data = { 1, 2, 4, 5, 6, 6 };
-    for (int i=0; i<=6; ++i) {
-      if (i != 0) {
-        in_data[6-i] = 3;
-      }
-      int out_data = rule.calculate(null, in_data);
-      assertTrue("Unexpected value for "+i+" threes: "+out_data, out_data==i*3);
+public void testThreesCalculate() {
+  program.Rule rule = new Threes();
+  int[] in_data = { 1, 2, 4, 5, 6, 6 };
+  for (int i=0; i<=6; ++i) {
+    if (i != 0) {
+      in_data[6-i] = 3;
     }
+    int out_data = rule.calculate(null, in_data);
+    assertTrue("Unexpected value for "+i+" threes: "+out_data, out_data==i*3);
   }
+}
+//---------------------------------------------------------
+@Test
+public void testTowerRuleName() {
+  program.Rule rule = new Tower();
+  String out_data = rule.rule_name();
+  assertTrue("Unexpected rule name: "+out_data, out_data.equals("Torn"));
+}
+@Test
+public void testTowerRuleDescription() {
+  program.Rule rule = new Tower();
+  String out_data = rule.rule_description();
+  assertTrue("Unexpected rule description: "+out_data, out_data.equals("Fyra likadana med ett tal och två likadana med ett annat tal"));
+}
+@Test
+public void testTowerCastIsNeeded() {
+  program.Rule rule = new Tower();
+  boolean out_data = rule.cast_is_needed();
+  assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
+}
+@Test
+public void testTowerCalculate() {
+    program.Rule rule = new Tower();
+    int[] in_data0 = { 1, 2, 3, 4, 5, 1 };
+    int out_data = rule.calculate(null, in_data0);
+    assertTrue("Unexpected value for 0 Tower: "+out_data, out_data==0);
+    int[] in_data1 = { 2, 3, 4, 5, 6, 6 };
+    out_data = rule.calculate(null, in_data1);
+    assertTrue("Unexpected value for 1 Tower: "+out_data, out_data==0);
+    int[] in_data2 = { 3, 2, 3, 2, 3, 3 };
+    out_data = rule.calculate(null, in_data2);
+    assertTrue("Unexpected value for 2 Tower: "+out_data, out_data==16);
+    int[] in_data3 = { 3, 2, 1, 2, 2, 6 };
+    out_data = rule.calculate(null, in_data3);
+    assertTrue("Unexpected value for 3 Tower: "+out_data, out_data==0);
+    int[] in_data4 = { 4, 2, 4, 2, 4, 6 };
+    out_data = rule.calculate(null, in_data4);
+    assertTrue("Unexpected value for 4 Tower: "+out_data, out_data==0);
+    int[] in_data5 = { 1, 5, 5, 5, 5, 1 };
+    out_data = rule.calculate(null, in_data5);
+    assertTrue("Unexpected value for 5 Tower: "+out_data, out_data==22);
+    int[] in_data6 = { 3, 3, 3, 3, 3, 3 };
+    out_data = rule.calculate(null, in_data6);
+    assertTrue("Unexpected value for 6 Tower: "+out_data, out_data==0);
+}
 //---------------------------------------------------------
 @Test
   public void testFoursRuleName() {
@@ -394,45 +438,86 @@ public class TestRules {
   }
 //---------------------------------------------------------
 @Test
-  public void testThreeOfAKindRuleName() {
-    program.Rule rule = new ThreeOfAKind();
-    String out_data = rule.rule_name();
-    assertTrue("Unexpected rule name: "+out_data, out_data.equals("Tretal"));
-  }
+public void testThreeOfAKindRuleName() {
+  program.Rule rule = new ThreeOfAKind();
+  String out_data = rule.rule_name();
+  assertTrue("Unexpected rule name: "+out_data, out_data.equals("Tretal"));
+}
 @Test
-  public void testThreeOfAKindRuleDescription() {
-    program.Rule rule = new ThreeOfAKind();
-    String out_data = rule.rule_description();
-    assertTrue("Unexpected rule description: "+out_data, out_data.equals("Summan av tre tärningar med samma tal"));
-  }
+public void testThreeOfAKindRuleDescription() {
+  program.Rule rule = new ThreeOfAKind();
+  String out_data = rule.rule_description();
+  assertTrue("Unexpected rule description: "+out_data, out_data.equals("Summan av tre tärningar med samma tal"));
+}
 @Test
-  public void testThreeOfAKindCastIsNeeded() {
-    program.Rule rule = new ThreeOfAKind();
-    boolean out_data = rule.cast_is_needed();
-    assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
-  }
+public void testThreeOfAKindCastIsNeeded() {
+  program.Rule rule = new ThreeOfAKind();
+  boolean out_data = rule.cast_is_needed();
+  assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
+}
 @Test
-  public void testThreeOfAKindCalculate() {
-    program.Rule rule = new ThreeOfAKind();
-    int[] in_data0 = { 1, 2, 3, 4, 5, 6 };
-    int out_data = rule.calculate(null, in_data0);
-    assertTrue("Unexpected value for 0 threeofakind: "+out_data, out_data==0);
-    int[] in_data1 = { 1, 2, 3, 2, 5, 6 };
-    out_data = rule.calculate(null, in_data1);
-    assertTrue("Unexpected value for 1 threeofakind: "+out_data, out_data==0);
-    int[] in_data2 = { 1, 2, 3, 2, 3, 6 };
-    out_data = rule.calculate(null, in_data2);
-    assertTrue("Unexpected value for 2 threeofakind: "+out_data, out_data==0);
-    int[] in_data3 = { 3, 2, 1, 2, 2, 6 };
-    out_data = rule.calculate(null, in_data3);
-    assertTrue("Unexpected value for 3 threeofakind: "+out_data, out_data==6);
-    int[] in_data4 = { 4, 2, 4, 2, 4, 6 };
-    out_data = rule.calculate(null, in_data4);
-    assertTrue("Unexpected value for 4 threeofakind: "+out_data, out_data==12);
-    int[] in_data5 = { 5, 5, 5, 5, 1, 6 };
-    out_data = rule.calculate(null, in_data5);
-    assertTrue("Unexpected value for 5 threeofakind: "+out_data, out_data==15);
-  }
+public void testThreeOfAKindCalculate() {
+  program.Rule rule = new ThreeOfAKind();
+  int[] in_data0 = { 1, 2, 3, 4, 5, 6 };
+  int out_data = rule.calculate(null, in_data0);
+  assertTrue("Unexpected value for 0 threeofakind: "+out_data, out_data==0);
+  int[] in_data1 = { 1, 2, 3, 2, 5, 6 };
+  out_data = rule.calculate(null, in_data1);
+  assertTrue("Unexpected value for 1 threeofakind: "+out_data, out_data==0);
+  int[] in_data2 = { 1, 2, 3, 2, 3, 6 };
+  out_data = rule.calculate(null, in_data2);
+  assertTrue("Unexpected value for 2 threeofakind: "+out_data, out_data==0);
+  int[] in_data3 = { 3, 2, 1, 2, 2, 6 };
+  out_data = rule.calculate(null, in_data3);
+  assertTrue("Unexpected value for 3 threeofakind: "+out_data, out_data==6);
+  int[] in_data4 = { 4, 2, 4, 2, 4, 6 };
+  out_data = rule.calculate(null, in_data4);
+  assertTrue("Unexpected value for 4 threeofakind: "+out_data, out_data==12);
+  int[] in_data5 = { 5, 5, 5, 5, 1, 6 };
+  out_data = rule.calculate(null, in_data5);
+  assertTrue("Unexpected value for 5 threeofakind: "+out_data, out_data==15);
+}
+//---------------------------------------------------------
+@Test
+public void testThreePairsRuleName() {
+  program.Rule rule = new ThreePairs();
+  String out_data = rule.rule_name();
+  assertTrue("Unexpected rule name: "+out_data, out_data.equals("Tre par"));
+}
+@Test
+public void testThreePairsRuleDescription() {
+  program.Rule rule = new ThreePairs();
+  String out_data = rule.rule_description();
+  assertTrue("Unexpected rule description: "+out_data, out_data.equals("Tre par, paren måste vara olika"));
+}
+@Test
+public void testThreePairsCastIsNeeded() {
+  program.Rule rule = new ThreePairs();
+  boolean out_data = rule.cast_is_needed();
+  assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
+}
+@Test
+public void testThreePairsCalculate() {
+  program.Rule rule = new ThreePairs();
+  int[] in_data0 = { 1, 2, 3, 4, 5, 6 };
+  int out_data = rule.calculate(null, in_data0);
+  assertTrue("Unexpected value for 0 threePairs: "+out_data, out_data==0);
+  int[] in_data1 = { 3, 2, 3, 2, 5, 6 };
+  out_data = rule.calculate(null, in_data1);
+  assertTrue("Unexpected value for 1 threePairs: "+out_data, out_data==0);
+  int[] in_data2 = { 1, 2, 3, 2, 3, 6 };
+  out_data = rule.calculate(null, in_data2);
+  assertTrue("Unexpected value for 2 threePairs: "+out_data, out_data==0);
+  int[] in_data3 = { 3, 2, 1, 2, 2, 6 };
+  out_data = rule.calculate(null, in_data3);
+  assertTrue("Unexpected value for 3 threePairs: "+out_data, out_data==0);
+  int[] in_data4 = { 4, 2, 4, 2, 3, 3 };
+  out_data = rule.calculate(null, in_data4);
+  assertTrue("Unexpected value for 4 threePairs: "+out_data, out_data==18);
+  int[] in_data5 = { 5, 5, 5, 5, 5, 5 };
+  out_data = rule.calculate(null, in_data5);
+  assertTrue("Unexpected value for 5 threePairs: "+out_data, out_data==0);
+}
 //---------------------------------------------------------
 @Test
   public void testFourOfAKindRuleName() {
@@ -529,47 +614,91 @@ public class TestRules {
   }
 //---------------------------------------------------------
 @Test
+public void testHouseRuleName() {
+  program.Rule rule = new House();
+  String out_data = rule.rule_name();
+  assertTrue("Unexpected rule name: "+out_data, out_data.equals("Hus"));
+}
+@Test
+public void testHouseRuleDescription() {
+  program.Rule rule = new House();
+  String out_data = rule.rule_description();
+  assertTrue("Unexpected rule description: "+out_data, out_data.equals("Två tretal, tärningarna i tretalen måste vara olika"));
+}
+@Test
+public void testHouseCastIsNeeded() {
+  program.Rule rule = new House();
+  boolean out_data = rule.cast_is_needed();
+  assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
+}
+@Test
+public void testHouseCalculate() {
+  program.Rule rule = new House();
+  int[] in_data0 = { 1, 2, 3, 4, 5, 1 };
+  int out_data = rule.calculate(null, in_data0);
+  assertTrue("Unexpected value for 0 House: "+out_data, out_data==0);
+  int[] in_data1 = { 2, 3, 4, 5, 6, 6 };
+  out_data = rule.calculate(null, in_data1);
+  assertTrue("Unexpected value for 1 House: "+out_data, out_data==0);
+  int[] in_data2 = { 3, 2, 3, 2, 3, 2 };
+  out_data = rule.calculate(null, in_data2);
+  assertTrue("Unexpected value for 2 House: "+out_data, out_data==15);
+  int[] in_data3 = { 3, 2, 1, 2, 2, 6 };
+  out_data = rule.calculate(null, in_data3);
+  assertTrue("Unexpected value for 3 House: "+out_data, out_data==0);
+  int[] in_data4 = { 4, 2, 4, 2, 4, 6 };
+  out_data = rule.calculate(null, in_data4);
+  assertTrue("Unexpected value for 4 House: "+out_data, out_data==0);
+  int[] in_data5 = { 1, 5, 5, 5, 5, 6 };
+  out_data = rule.calculate(null, in_data5);
+  assertTrue("Unexpected value for 5 House: "+out_data, out_data==0);
+  int[] in_data6 = { 3, 3, 3, 3, 3, 3 };
+  out_data = rule.calculate(null, in_data6);
+  assertTrue("Unexpected value for 6 House: "+out_data, out_data==0);
+}
+//---------------------------------------------------------
+@Test
 public void testLargeStraightRuleName() {
-    program.Rule rule = new LargeStraight();
-    String out_data = rule.rule_name();
-    assertTrue("Unexpected rule name: "+out_data, out_data.equals("Stor stege"));
+  program.Rule rule = new LargeStraight();
+  String out_data = rule.rule_name();
+  assertTrue("Unexpected rule name: "+out_data, out_data.equals("Stor stege"));
 }
 @Test
 public void testLargeStraightRuleDescription() {
-    program.Rule rule = new LargeStraight();
-    String out_data = rule.rule_description();
-    assertTrue("Unexpected rule description: "+out_data, out_data.equals("2+3+4+5+6 => 20 poäng"));
+  program.Rule rule = new LargeStraight();
+  String out_data = rule.rule_description();
+  assertTrue("Unexpected rule description: "+out_data, out_data.equals("2+3+4+5+6 => 20 poäng"));
 }
 @Test
 public void testLargeStraightCastIsNeeded() {
-    program.Rule rule = new LargeStraight();
-    boolean out_data = rule.cast_is_needed();
-    assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
+  program.Rule rule = new LargeStraight();
+  boolean out_data = rule.cast_is_needed();
+  assertTrue("Unexpected cast_is_needed value: "+out_data, out_data);
 }
 @Test
 public void testLargeStraightCalculate() {
-    program.Rule rule = new LargeStraight();
-    int[] in_data0 = { 1, 2, 3, 4, 5, 1 };
-    int out_data = rule.calculate(null, in_data0);
-    assertTrue("Unexpected value for 0 largestraight: "+out_data, out_data==0);
-    int[] in_data1 = { 2, 3, 4, 5, 6, 6 };
-    out_data = rule.calculate(null, in_data1);
-    assertTrue("Unexpected value for 1 largestraight: "+out_data, out_data==20);
-    int[] in_data2 = { 1, 2, 3, 2, 3, 6 };
-    out_data = rule.calculate(null, in_data2);
-    assertTrue("Unexpected value for 2 largestraight: "+out_data, out_data==0);
-    int[] in_data3 = { 3, 2, 1, 2, 2, 6 };
-    out_data = rule.calculate(null, in_data3);
-    assertTrue("Unexpected value for 3 largestraight: "+out_data, out_data==0);
-    int[] in_data4 = { 4, 2, 4, 2, 4, 6 };
-    out_data = rule.calculate(null, in_data4);
-    assertTrue("Unexpected value for 4 largestraight: "+out_data, out_data==0);
-    int[] in_data5 = { 1, 5, 5, 5, 5, 6 };
-    out_data = rule.calculate(null, in_data5);
-    assertTrue("Unexpected value for 5 largestraight: "+out_data, out_data==0);
-    int[] in_data6 = { 3, 3, 3, 3, 3, 6 };
-    out_data = rule.calculate(null, in_data6);
-    assertTrue("Unexpected value for 6 largestraight: "+out_data, out_data==0);
+  program.Rule rule = new LargeStraight();
+  int[] in_data0 = { 1, 2, 3, 4, 5, 1 };
+  int out_data = rule.calculate(null, in_data0);
+  assertTrue("Unexpected value for 0 largestraight: "+out_data, out_data==0);
+  int[] in_data1 = { 2, 3, 4, 5, 6, 6 };
+  out_data = rule.calculate(null, in_data1);
+  assertTrue("Unexpected value for 1 largestraight: "+out_data, out_data==20);
+  int[] in_data2 = { 1, 2, 3, 2, 3, 6 };
+  out_data = rule.calculate(null, in_data2);
+  assertTrue("Unexpected value for 2 largestraight: "+out_data, out_data==0);
+  int[] in_data3 = { 3, 2, 1, 2, 2, 6 };
+  out_data = rule.calculate(null, in_data3);
+  assertTrue("Unexpected value for 3 largestraight: "+out_data, out_data==0);
+  int[] in_data4 = { 4, 2, 4, 2, 4, 6 };
+  out_data = rule.calculate(null, in_data4);
+  assertTrue("Unexpected value for 4 largestraight: "+out_data, out_data==0);
+  int[] in_data5 = { 1, 5, 5, 5, 5, 6 };
+  out_data = rule.calculate(null, in_data5);
+  assertTrue("Unexpected value for 5 largestraight: "+out_data, out_data==0);
+  int[] in_data6 = { 3, 3, 3, 3, 3, 6 };
+  out_data = rule.calculate(null, in_data6);
+  assertTrue("Unexpected value for 6 largestraight: "+out_data, out_data==0);
 }
 //---------------------------------------------------------
 @Test

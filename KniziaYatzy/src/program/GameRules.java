@@ -63,7 +63,7 @@ public class GameRules {
 "att förklara närmare här.\r\n" +
 "\r\n" +
 "För det första finns basala termer som ett, två par och tre par. Det handlar\r\n" +
-"helt enkelt om att spelaren bland de fem tärningarna ska få minst ett\r\n" +
+"helt enkelt om att spelaren bland de sex tärningarna ska få minst ett\r\n" +
 "par, alternativt två par eller tre par.\r\n" +
 "\r\n" +
 "Det innebär att spelaren ska få till exempel två treor för ett\r\n" +

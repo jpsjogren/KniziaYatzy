@@ -17,9 +17,9 @@ public class GameRules {
 "ska sparas under nästa slag eller om alla tärningar ska slås om.\r\n" +
 "\r\n" +
 "När en spelare har kastat eller slagit tärningarna tre gånger förs\r\n" +
-"resultatet in i blocket.\r\n" +
+"resultatet in i protokollet.\r\n" +
 "\r\n" +
-"Man behöver inte följa ordningen som de olika slagen står i på blocket.\r\n" +
+"Man behöver inte följa ordningen i protokollet som de olika slagen står i.\r\n" +
 "");
 
 	}
@@ -62,12 +62,13 @@ public class GameRules {
 "rejält viktiga. Här finns också en del konstiga termer som vi kommer\r\n" +
 "att förklara närmare här.\r\n" +
 "\r\n" +
-"För det första finns basala termer som ett, två par och tre par. Det handlar\r\n" +
-"helt enkelt om att spelaren bland de sex tärningarna ska få minst ett\r\n" +
-"par, alternativt två par eller tre par.\r\n" +
+"För det första finns basala termer som ett par, två par och tre par.\r\n" +
+"Det handlar om att spelaren bland de sex tärningarna ska få minst ett par,\r\n" +
+"alternativt två par eller tre par.\r\n" +
 "\r\n" +
-"Det innebär att spelaren ska få till exempel två treor för ett\r\n" +
-"par. För två par kan spelaren få två fyror och två femmor. För tre par krävs tre olika par.\r\n" +
+"Det innebär att spelaren ska få till exempel två treor för ett par.\r\n" +
+"För två par kan spelaren få två fyror och två femmor. För tre par krävs\r\n" +
+"tre olika par.\r\n" +
 "\r\n" +
 "Det ska dock påpekas att ju högre siffror tärningarna visar, desto\r\n" +
 "högre blir poängen. Två femmor ger till exempel tio poäng på ett par,\r\n" +
@@ -78,13 +79,14 @@ public class GameRules {
 	public static void threesAndFoursome() {
 
 		System.out.println(
-"Termerna tretal, fyrtal och femtal är inte heller så svåra att förstå. Man\r\n" +
-"ska som spelare vid ett tretal helt enkelt få tre likadana tärningar.\r\n" +
-"Vid ett fyrtal krävs fyra likadana sådana och vi femtal krävs fem likadana.\r\n" +
+"Termerna tretal, fyrtal och femtal är inte heller så svåra att förstå.\r\n" +
 "\r\n" +
-"Även här har antalet prickar på tärningarna betydelse. Ett tretal\r\n" +
-"med sexor ger till exempel högre poäng än ett med tvåor. Samma sak\r\n" +
-"gäller för fyrtal och femtal. Men sedan kommer de något mer komplicerade momenten.\r\n" +
+"Vid ett tretal ska man som spelare få tre likadana tärningar,\r\n" +
+"fyra likadana vid ett fyrtal och fem likadana vid ett femtal.\r\n" +
+"\r\n" +
+"Även här har antalet prickar på tärningarna betydelse. Till exempel\r\n" +
+"ett tretal med sexor ger högre poäng än ett med tvåor. Samma sak\r\n" +
+"gäller för fyrtal och femtal.\r\n" +
 "");
 	}
 
@@ -102,8 +104,10 @@ public class GameRules {
 "sex. Även med tre slag kan det vara lite klurigt att få tärningarna\r\n" +
 "att visa rätt. En liten straight ger 15 poäng, och en stor ger 20.\r\n" +
 "\r\n" +
-"Sen finns det även full stege då gäller det att få alla sex tärningar att visa steg, \r\n" +
-"det vill säga en etta, en tvåa, en trea, en fyra, en femma samt en sexa. Full stege ger 21 poäng");
+"Sen finns det även en full stege. För den ska man få alla sex tärningar\r\n" +
+"att visa steg, det vill säga en etta, en tvåa, en trea, en fyra, en femma\r\n" +
+"samt en sexa. Full stege ger 21 poäng.\r\n" +
+"");
 	}
 
 	public static void fullHouse() {
@@ -126,24 +130,32 @@ public class GameRules {
 "en kåk när denne redan har haft en sådan.\r\n" +
 "\r\n" +
 "Då finns fältet chans. Här räknas prickarna på alla sex tärningarna\r\n" +
-"samman. Maxsumman på chansen är 36 och den summan får spelaren genom\r\n" +
-"att slå sex sexor.\r\n" +
+"samman. Den maximala summan på chansen är 36 och den summan får spelaren\r\n" +
+"genom att slå sex sexor.\r\n" +
 "\r\n" +
-"Det sker dock inte fullt så ofta. Många gånger är det ett sätt att slippa stryka något.\r\n" +
+"Det sker dock inte fullt så ofta. Många gånger är det ett sätt att slippa\r\n" +
+"stryka något.\r\n" +
 "");
 	}
 
 	public static void house() {
 		System.out.println(
-"För att få hus krävs det att man får två stycken tretal, det vill säga tre av sexor och tre av femmor. \r\n"+
-"Det är viktigt att tärningarna i tretalen visar olika tal för att få poäng.");
+"För att få hus krävs det att man får två stycken tretal till exempel\r\n" +
+"tre av sexor och tre av femmor.\r\n" +
+"\r\n" +
+"Det är viktigt att tärningarna i tretalen visar olika tal för att få poäng." +
+"");
 		
 	}
 	
 	public static void tower() {
 		System.out.println(
-"För att få torn krävs det att man får ett par och fyrtal, det vill säga ett par med sexor och ett fyrtal av femmor. \r\n"+
-"Det är viktigt att tärningarna i ett par och fyrtalet visar olika tal för att få poäng.");
+"För att få torn krävs det att man får ett par och ett fyrtal,\r\n" +
+"till exempel ett par med sexor och ett fyrtal av femmor.\r\n"+
+"\r\n" +
+"Det är viktigt att tärningarna i ett par och i fyrtalet visar olika tal\r\n" +
+"för att få poäng.\r\n" +
+"");
 		
 	}
 	

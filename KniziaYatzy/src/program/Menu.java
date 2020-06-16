@@ -47,8 +47,8 @@ public class Menu {
 			System.out.println("(5) Tretal och fyrtal");
 			System.out.println("(6) Stegar, eller stor samt liten straight");
 			System.out.println("(7) Kåk");
-			System.out.println("(8) hus");
-			System.out.println("(9) torn");
+			System.out.println("(8) Hus");
+			System.out.println("(9) Torn");
 			System.out.println("(10) Chans");
 			System.out.println("(11) Yatzy");
 			System.out.println("(12) Gå tillbaka till huvudmenyn");

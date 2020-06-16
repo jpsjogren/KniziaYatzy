@@ -47,9 +47,11 @@ public class Menu {
 			System.out.println("(5) Tretal och fyrtal");
 			System.out.println("(6) Stegar, eller stor samt liten straight");
 			System.out.println("(7) Kåk");
-			System.out.println("(8) Chans");
-			System.out.println("(9) Yatzy");
-			System.out.println("(10) Gå tillbaka till huvudmenyn");
+			System.out.println("(8) hus");
+			System.out.println("(9) torn");
+			System.out.println("(10) Chans");
+			System.out.println("(11) Yatzy");
+			System.out.println("(12) Gå tillbaka till huvudmenyn");
 			System.out.print("Ditt val: ");
 			choice = scan.nextLine();
 
@@ -76,15 +78,21 @@ public class Menu {
 				GameRules.fullHouse();
 			break;
 			case("8"):
-				GameRules.chance();
+				GameRules.house();
 			break;
 			case("9"):
-				GameRules.yatzy();
+				GameRules.tower();
 			break;
 			case("10"):
+				GameRules.chance();
+			break;
+			case("11"):
+				GameRules.yatzy();
+			break;
+			case("12"):
                                 return;
 			default:
-				System.out.println("Fel värde (tips 1-10)");    
+				System.out.println("Fel värde (tips 1-12)");    
 			}
 		}
 		while(true);

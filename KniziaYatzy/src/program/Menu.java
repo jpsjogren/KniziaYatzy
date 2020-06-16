@@ -50,7 +50,7 @@ public class Menu {
 			System.out.println("(8) Hus");
 			System.out.println("(9) Torn");
 			System.out.println("(10) Chans");
-			System.out.println("(11) Yatzy");
+			System.out.println("(11) Maxiyatzy");
 			System.out.println("(12) Gå tillbaka till huvudmenyn");
 			System.out.print("Ditt val: ");
 			choice = scan.nextLine();

@@ -45,7 +45,7 @@ public class Menu {
 			System.out.println("(3) Bonus");  
 			System.out.println("(4) Protokollets undre del");
 			System.out.println("(5) Tretal och fyrtal");
-			System.out.println("(6) Stegar, eller stor samt liten straight");
+			System.out.println("(6) Liten, stor och full straight (stegar)");
 			System.out.println("(7) Kåk");
 			System.out.println("(8) Hus");
 			System.out.println("(9) Torn");
